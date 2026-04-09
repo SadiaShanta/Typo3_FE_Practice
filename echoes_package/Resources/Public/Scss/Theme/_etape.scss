@@ -1,0 +1,129 @@
+
+$primary-green: #9dbb30;
+$dark-text: #122A08;
+$button-lime: #a3bc39;
+$bg-cream: #f9f9f2;
+$font-Fraunces: 'Fraunces', serif; 
+$font-Inter: 'Inter 18pt', sans-serif; 
+$font-Epilogue:'Epilogue', sans-serif; 
+.frame.frame-etape-section{
+    background-color: $bg-cream;
+// Main Container targeting
+.ce-container {
+  background-color: $bg-cream;
+  padding: 2px 20px;
+  text-align: center;
+         // --- Header Section ---
+        .text-primary {
+          // display: block;
+          text-transform: uppercase;
+          font-size: 16px;
+          letter-spacing: 1px;
+          font-weight: 600;
+          margin-bottom: 2px;
+          font-family: $font-Inter;
+          color:$dark-text !important;
+        }   
+    
+    h2 {
+      font-family: $font-Fraunces;
+      font-size: 72px;
+      color: $dark-text;
+      margin-bottom: 2px; //20
+      font-weight: 500;
+    }
+
+    p {
+      font-family: $font-Inter;
+      font-size: 18px;
+      color: $dark-text;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+ // }
+
+  // The 3-column row
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+
+    .ce-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      // Icon/Image container
+      .gallery-row {
+        margin-bottom: 25px;
+        
+        .image {
+          img, svg {
+            width: 40px; // Adjust based on icon size
+            height: auto;
+          }
+        }
+      }
+
+      // Column Titles (H3)
+      h3 {
+        //font-family: $font-Epilogue;
+        font-size: 36px;
+        font-weight: 700;
+        color: $dark-text;
+        margin-bottom: 15px;
+      }
+
+      // Column Descriptions
+      p {
+        //font-family: $font-Inter;
+        font-size: 16px;
+        color: $dark-text;
+        line-height: 1.5;
+        max-width: 300px;
+      }
+      .btn-discover, a[title="Descopera"] {
+        display: inline-block;
+        background-color: $button-lime;
+        color: white;
+        padding: 12px 35px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: opacity 0.3s ease;
+        margin-top: 20px;
+            
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .ce-container .row {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+}
+@media (max-width: 768px) {
+  .frame.frame-etape-section{
+
+.ce-container {
+
+    
+    h2 {
+      font-size: 36px;
+    }
+  }
+}
+}

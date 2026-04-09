@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <backgroundImage>
+                        <TCEforms>
+                            <label>LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundImage</label>
+                            <config>
+                                <type>file</type>
+                                <maxitems>1</maxitems>
+                                <allowed>common-image-types</allowed>
+                            </config>
+                        </TCEforms>
+                    </backgroundImage>
+                    <backgroundSize>
+                        <TCEforms>
+                            <label>LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundSize</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundSize.cover</numIndex>
+                                        <numIndex index="1">cover</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundSize.contain</numIndex>
+                                        <numIndex index="1">contain</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundSize.auto</numIndex>
+                                        <numIndex index="1">auto</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>cover</default>
+                            </config>
+                        </TCEforms>
+                    </backgroundSize>
+                    <backgroundPosition>
+                        <TCEforms>
+                            <label>LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundPosition</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundPosition.center</numIndex>
+                                        <numIndex index="1">center center</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundPosition.top</numIndex>
+                                        <numIndex index="1">center top</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundPosition.bottom</numIndex>
+                                        <numIndex index="1">center bottom</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundPosition.left</numIndex>
+                                        <numIndex index="1">left center</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundPosition.right</numIndex>
+                                        <numIndex index="1">right center</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>center center</default>
+                            </config>
+                        </TCEforms>
+                    </backgroundPosition>
+                    <backgroundRepeat>
+                        <TCEforms>
+                            <label>LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.backgroundRepeat</label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </backgroundRepeat>
+                    <containerClass>
+                        <TCEforms>
+                            <label>LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.containerClass</label>
+                            <config>
+                                <type>input</type>
+                                <placeholder>container</placeholder>
+                            </config>
+                        </TCEforms>
+                    </containerClass>
+                    <isContainerFluid>
+                        <TCEforms>
+                            <label>LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.isContainerFluid</label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </isContainerFluid>
+                    <minHeight>
+                        <TCEforms>
+                            <label>LLL:EXT:site_package/Resources/Private/Language/locallang_be.xlf:page_container_background_image.minHeight</label>
+                            <config>
+                                <type>input</type>
+                                <placeholder>400px</placeholder>
+                            </config>
+                        </TCEforms>
+                    </minHeight>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

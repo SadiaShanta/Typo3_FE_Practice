@@ -1,0 +1,113 @@
+
+
+
+<v:asset.style path="EXT:matrix_site_package/Resources/Public/slick/slick-theme.css" name="slick-theme"  />
+<v:asset.style name="slick-css" path="EXT:matrix_site_package/Resources/Public/slick/slick.css" />
+<v:asset.script path="EXT:matrix_site_package/Resources/Public/slick/slick.min.js" name="slick" />
+      
+      
+<f:if condition="{data.header}">
+    {data.header}
+</f:if>
+
+<f:if condition="{data.tx_mask_showcase_card_items}">
+    <ul id="showcase-list" class="showcase-slider">
+        <f:for each="{data.tx_mask_showcase_card_items}" as="data_item">
+            <li class="showcase-card">
+                <div class="showcase-card-inner">
+                    <f:if condition="{data_item.tx_mask_showcase_card_bodytext}">
+                        {data_item.tx_mask_showcase_card_bodytext -> f:format.html()}
+                    </f:if>
+            
+                    <f:for each="{data_item.tx_mask_showcase_card_image}" as="file">
+                        <f:image image="{file}" width="200" />
+                        {file.description}
+                    </f:for>
+                </div>
+            </li>
+        </f:for>
+    </ul>
+
+    <button id="loadMoreBtn">Load More +</button>
+</f:if>
+
+<v:asset.script name="showcase_cards">
+document.addEventListener("DOMContentLoaded", function () {
+
+    const showcaseList = document.querySelector('.showcase-slider');
+    const cards = document.querySelectorAll('.showcase-card');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+
+    let visibleCount = 6;
+    const mobileBreakpoint = 480;
+
+    /* ------------------
+       LOAD MORE (DESKTOP)
+    -------------------*/
+    function initLoadMore() {
+        visibleCount = 6;
+
+        cards.forEach((card, index) => {
+            card.style.display = index < visibleCount ? 'flex' : 'none';
+        });
+
+        loadMoreBtn.style.display = cards.length > visibleCount ? 'inline-block' : 'none';
+
+        loadMoreBtn.onclick = function () {
+            visibleCount += 6;
+
+            cards.forEach((card, index) => {
+                if (index < visibleCount) {
+                    card.style.display = 'flex';
+                }
+            });
+
+            if (visibleCount >= cards.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        };
+    }
+
+    /* ------------------
+       SLICK (MOBILE)
+    -------------------*/
+    function initSlick() {
+        if (!$(showcaseList).hasClass('slick-initialized')) {
+            $(showcaseList).slick({
+                slidesToShow: 1.2,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                infinite: false,
+                swipe: true
+            });
+        }
+    }
+
+    function destroySlick() {
+        if ($(showcaseList).hasClass('slick-initialized')) {
+            $(showcaseList).slick('unslick');
+        }
+    }
+
+    /* ------------------
+       SWITCH LOGIC
+    -------------------*/
+    function handleResponsive() {
+        if (window.innerWidth < mobileBreakpoint) {
+            // Mobile → Slick
+            loadMoreBtn.style.display = 'none';
+            cards.forEach(card => card.style.display = 'flex');
+            initSlick();
+        } else {
+            // Desktop → Load More
+            destroySlick();
+            initLoadMore();
+        }
+    }
+
+    handleResponsive();
+    window.addEventListener('resize', handleResponsive);
+
+});
+</v:asset.script>

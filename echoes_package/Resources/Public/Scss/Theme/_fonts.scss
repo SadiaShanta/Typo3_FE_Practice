@@ -1,0 +1,696 @@
+/* Fraunces 72pt – Thin */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Thin Italic */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Light */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Regular */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Italic */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* SemiBold Italic */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Bold */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Black */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Black Italic */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../Fonts/fraunces/Fraunces_72pt-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* Oswald – ExtraLight */
+@font-face {
+    font-family: "Oswald";
+    src: url("../../Fonts/oswald/Oswald-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Oswald – Light */
+@font-face {
+    font-family: "Oswald";
+    src: url("../../Fonts/oswald/Oswald-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Oswald – Regular */
+@font-face {
+    font-family: "Oswald";
+    src: url("../../Fonts/oswald/Oswald-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Oswald – Medium */
+@font-face {
+    font-family: "Oswald";
+    src: url("../../Fonts/oswald/Oswald-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Oswald – SemiBold */
+@font-face {
+    font-family: "Oswald";
+    src: url("../../Fonts/oswald/Oswald-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Oswald – Bold */
+@font-face {
+    font-family: "Oswald";
+    src: url("../../Fonts/oswald/Oswald-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Epilogue - Thin (100) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Epilogue - ExtraLight (200) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Epilogue - Light (300) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Epilogue - Regular (400) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Epilogue - Medium (500) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Epilogue - SemiBold (600) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Epilogue - Bold (700) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Epilogue - ExtraBold (800) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Epilogue - Black (900) */
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url("../../Fonts/Epilogue/Epilogue-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+/* Inter 18pt Series */
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-Thin.ttf") format("truetype");
+    font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-ThinItalic.ttf") format("truetype");
+    font-weight: 100; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-ExtraLight.ttf") format("truetype");
+    font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-Light.ttf") format("truetype");
+    font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-LightItalic.ttf") format("truetype");
+    font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-Regular.ttf") format("truetype");
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-Italic.ttf") format("truetype");
+    font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-Medium.ttf") format("truetype");
+    font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-MediumItalic.ttf") format("truetype");
+    font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-SemiBold.ttf") format("truetype");
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-Bold.ttf") format("truetype");
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-BoldItalic.ttf") format("truetype");
+    font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-ExtraBold.ttf") format("truetype");
+    font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-Black.ttf") format("truetype");
+    font-weight: 900; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../../Fonts/Inter/Inter_18pt-BlackItalic.ttf") format("truetype");
+    font-weight: 900; font-style: italic; font-display: swap;
+}
+/* Inter 24pt Series */
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-Thin.ttf") format("truetype");
+    font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-ThinItalic.ttf") format("truetype");
+    font-weight: 100; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-ExtraLight.ttf") format("truetype");
+    font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-Light.ttf") format("truetype");
+    font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-LightItalic.ttf") format("truetype");
+    font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-Regular.ttf") format("truetype");
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-Italic.ttf") format("truetype");
+    font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-Medium.ttf") format("truetype");
+    font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-MediumItalic.ttf") format("truetype");
+    font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-SemiBold.ttf") format("truetype");
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-Bold.ttf") format("truetype");
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-BoldItalic.ttf") format("truetype");
+    font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-ExtraBold.ttf") format("truetype");
+    font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-Black.ttf") format("truetype");
+    font-weight: 900; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("../../Fonts/Inter/Inter_24pt-BlackItalic.ttf") format("truetype");
+    font-weight: 900; font-style: italic; font-display: swap;
+}
+/* Inter 28pt Series */
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-Thin.ttf") format("truetype");
+    font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-ThinItalic.ttf") format("truetype");
+    font-weight: 100; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-ExtraLight.ttf") format("truetype");
+    font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-Light.ttf") format("truetype");
+    font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-LightItalic.ttf") format("truetype");
+    font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-Regular.ttf") format("truetype");
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-Italic.ttf") format("truetype");
+    font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-Medium.ttf") format("truetype");
+    font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-MediumItalic.ttf") format("truetype");
+    font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-SemiBold.ttf") format("truetype");
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-Bold.ttf") format("truetype");
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-BoldItalic.ttf") format("truetype");
+    font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-ExtraBold.ttf") format("truetype");
+    font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-Black.ttf") format("truetype");
+    font-weight: 900; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter 28pt";
+    src: url("../../Fonts/Inter/Inter_28pt-BlackItalic.ttf") format("truetype");
+    font-weight: 900; font-style: italic; font-display: swap;
+}
+
+/* Raleway - Thin (100) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-Thin.ttf") format("truetype");
+    font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-ThinItalic.ttf") format("truetype");
+    font-weight: 100; font-style: italic; font-display: swap;
+}
+
+/* Raleway - ExtraLight (200) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-ExtraLight.ttf") format("truetype");
+    font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200; font-style: italic; font-display: swap;
+}
+
+/* Raleway - Light (300) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-Light.ttf") format("truetype");
+    font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-LightItalic.ttf") format("truetype");
+    font-weight: 300; font-style: italic; font-display: swap;
+}
+
+/* Raleway - Regular (400) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-Italic.ttf") format("truetype");
+    font-weight: 400; font-style: italic; font-display: swap;
+}
+
+/* Raleway - Medium (500) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-Medium.ttf") format("truetype");
+    font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-MediumItalic.ttf") format("truetype");
+    font-weight: 500; font-style: italic; font-display: swap;
+}
+
+/* Raleway - SemiBold (600) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-SemiBold.ttf") format("truetype");
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600; font-style: italic; font-display: swap;
+}
+
+/* Raleway - Bold (700) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-Bold.ttf") format("truetype");
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-BoldItalic.ttf") format("truetype");
+    font-weight: 700; font-style: italic; font-display: swap;
+}
+
+/* Raleway - ExtraBold (800) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-ExtraBold.ttf") format("truetype");
+    font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800; font-style: italic; font-display: swap;
+}
+
+/* Raleway - Black (900) */
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-Black.ttf") format("truetype");
+    font-weight: 900; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../../Fonts/Raleway/Raleway-BlackItalic.ttf") format("truetype");
+    font-weight: 900; font-style: italic; font-display: swap;
+}

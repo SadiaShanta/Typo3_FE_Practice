@@ -1,0 +1,107 @@
+<div class="tx-mask-stack-pages">
+    <f:if condition="{data.tx_mask_stack_pages_name} == 'services'">
+        <f:if condition="{data.tx_mask_stack_pages_items}">
+            <ul>
+                <f:for each="{data.tx_mask_stack_pages_items}" as="data_item" iteration="i">
+                    <li class="stack-page" style="--i: {i.index}">
+                        <f:if condition="{data_item.tx_mask_stack_pages_number}">
+                            <div class="stack-page__number">
+                                0{data_item.tx_mask_stack_pages_number}
+                            </div>
+                        </f:if>
+                        <f:if condition="{data_item.tx_mask_stack_pages_bodytext}">
+                            <div class="stack-page__content">
+                                {data_item.tx_mask_stack_pages_bodytext -> f:format.html()}
+                            </div>                           
+                        </f:if>
+                        <f:for each="{data_item.tx_mask_stack_pages_image}" as="file">
+                            <div class="stack-page__image">
+                                <f:image image="{file}" />
+                            </div>   
+                        </f:for>
+                    </li>
+                </f:for>
+            </ul>
+        </f:if>
+    </f:if>
+</div>
+<!-- <div class="tx-mask-stack-pages">
+    <f:if condition="{data.tx_mask_stack_pages_name} == 'services'">
+        <f:if condition="{data.tx_mask_stack_pages_items}">
+            <ul class="stack-pages">
+                <f:for each="{data.tx_mask_stack_pages_items}" as="item">
+                    <li class="stack-page">
+                        <div class="stack-page__inner">
+                        <f:if condition="{item.tx_mask_stack_pages_number}">
+                            <div class="stack-page__number">
+                                {item.tx_mask_stack_pages_number}
+                            </div>
+                        </f:if>
+
+                        <div class="stack-page__content">
+                            {item.tx_mask_stack_pages_bodytext -> f:format.html()}
+                        </div>
+
+                        <f:if condition="{item.tx_mask_stack_pages_image}">
+                            <div class="stack-page__image">
+                                <f:for each="{item.tx_mask_stack_pages_image}" as="file">
+                                    <f:image image="{file}" />
+                                </f:for>
+                            </div>
+                        </f:if>
+                        </div>
+                    </li>
+                </f:for>
+            </ul>
+        </f:if>
+    </f:if>
+</div> -->
+<!-- <f:if condition="{data.tx_mask_stack_pages_name} == 'services'">
+    <f:if condition="{data.tx_mask_stack_pages_items}">
+    <ul>
+        <f:for each="{data.tx_mask_stack_pages_items}" as="data_item">
+            <li>
+                <f:if condition="{data_item.tx_mask_stack_pages_number}">
+                    {data_item.tx_mask_stack_pages_number}
+                </f:if>
+                <f:if condition="{data_item.tx_mask_stack_pages_bodytext}">
+                    {data_item.tx_mask_stack_pages_bodytext -> f:format.html()}
+                </f:if>
+                <f:for each="{data_item.tx_mask_stack_pages_image}" as="file">
+                    <f:image image="{file}" width="200" />
+                    {file.description}
+                </f:for>
+            </li>
+        </f:for>
+    </ul>
+</f:if>
+</f:if>
+ -->
+
+ <!-- <div id="c102" class="frame frame-default frame-type-ce_container frame-layout-0">
+    <div class="ce-container container">
+        <div class="tx-mask-stack-pages">
+            <ul>
+                <li class="stack-page">
+                    <div class="stack-page__number"> 01 </div>
+                    <div class="stack-page__content">
+                        <h2>
+                            <span>Digital Transformation Strategy</span>
+                        </h2>
+                        <p>Blueprints for growth aligned with Vision 2030 and beyond.</p>
+                    </div>
+                    <div class="stack-page__image">
+                        <img src="/fileadmin/user_upload/DigitalTransformation.jpg" width="4096" height="2731" alt="">
+                    </div>
+                </li>
+                <li class="stack-page"></li>
+                <li class="stack-page"></li>
+                <li class="stack-page"></li>
+                <li class="stack-page"></li>
+                <li class="stack-page"></li>
+                <li class="stack-page"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+     -->

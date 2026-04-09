@@ -1,0 +1,117 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+    <f:render section="FooterMenu" arguments="{menu: footernavigation, level: 0, theme: theme}" />
+    <f:section name="FooterMenu">
+
+  <!-- Newsletter Section -->
+  <div class="footer__newsletter">
+      <div class="container">
+          <div class="footer__newsletter-inner">
+
+              <div class="footer__newsletter-text">
+                  <h3>Rămâi conectat</h3>
+                  <p>
+                      Primește noutăți despre artiști, evenimente și oportunități
+                  </p>
+              </div>
+
+              <form class="footer__newsletter-form" method="post" action="#">
+                  <input type="email"
+                         name="email"
+                         placeholder="Email-ul tău"
+                         required />
+                  <button type="submit">
+                      Abonează-te
+                  </button>
+              </form>
+
+          </div>
+      </div>
+  </div>
+
+  <!-- Main Footer Content -->
+  <div class="footer__main">
+      <div class="container">
+          <div class="footer__grid">
+
+              <!-- Brand -->
+              <div class="footer__col footer__brand">
+ 
+
+                  <p>
+                      Echoes reunește artiștii, locurile și ascultătorii într-un dialog deschis.
+                  </p>
+
+                  <div class="footer__social">
+                      <a href="#" aria-label="Facebook">
+                          <i class="icon-facebook"></i>
+                      </a>
+                      <a href="#" aria-label="Instagram">
+                          <i class="icon-instagram"></i>
+                      </a>
+                      <a href="#" aria-label="Twitter">
+                          <i class="icon-twitter"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Navigation -->
+              <div class="footer__col">
+                  <h4>Navigare</h4>
+                  <ul>
+                      <li><a href="#despre">Despre</a></li>
+                      <li><a href="#înscrieri">Înscrieri</a></li>
+                      <li><a href="#noutăți">Noutăți</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+              </div>
+
+              <!-- Contact -->
+              <div class="footer__col">
+                  <h4>Contact</h4>
+                  <ul>
+                      <li>
+                          <span>Email</span>
+                          <a href="mailto:info@echoes.ro">info@echoes.ro</a>
+                      </li>
+                      <li>
+                          <span>Telefon</span>
+                          <a href="tel:+40123456789">+40 123 456 789</a>
+                      </li>
+                      <li>
+                          <span>Adresă</span>
+                          Târgu Mureș, România
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- Program -->
+              <div class="footer__col">
+                  <h4>Program</h4>
+                  <ul>
+                      <li>Luni - Vineri: 9:00 - 18:00</li>
+                      <li>Sâmbătă: 10:00 - 14:00</li>
+                      <li>Duminică: Închis</li>
+                  </ul>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+          <p>© 2025 Echoes. Toate drepturile rezervate.</p>
+
+          <div class="footer__links">
+              <a href="#">Politica de confidențialitate</a>
+              <a href="#">Termeni și condiții</a>
+              <a href="#">Setări cookies</a>
+          </div>
+      </div>
+  </div>
+
+</f:section>
+
+</html>

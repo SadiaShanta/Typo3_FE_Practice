@@ -1,0 +1,76 @@
+// Variables
+$bg-dark-green: #2d4a13; 
+$button-lime: #98b92e;   
+$text-white: #ffffff;
+
+.frame.frame-participi-section {
+  background-color: $bg-dark-green;
+  //padding: 80px 20px; // Vertical breathing room
+  display: flex;
+  justify-content: center;
+
+  .ce-container {
+    width: 100%;
+    max-width: 1200px;
+    
+  
+      display: flex;
+      flex-direction: column; // Stack elements vertically
+      align-items: center;    // Center horizontally
+      text-align: center;
+      color: $text-white;
+
+      h2 {
+        font-family: 'Fraunces', serif; // Ensure this is loaded in your project
+        font-size: 4rem; 
+        line-height: 1.1;
+        margin-bottom: 24px;
+        
+        span {
+          display: block; // Ensures it behaves as a block if needed
+        }
+      }
+
+      p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        max-width: 600px; // Prevents the text from stretching too wide
+        line-height: 1.5;
+      }
+
+      // // Target the link inside the paragraph
+      // a[title="Inscrieri"] {
+      //   display: inline-block;
+      //   background-color: $button-lime;
+      //   color: $text-white;
+      //   padding: 12px 35px;
+      //   border-radius: 8px; // Pill shape to match screenshot
+      //   text-transform: uppercase;
+      //   text-decoration: none;
+      //   font-weight: 700;
+      //   font-size: 0.75rem; // Button text is usually smaller
+      //   letter-spacing: 0.1em;
+      //   transition: all 0.3s ease;
+
+      //   &:hover {
+      //     background-color: lighten($button-lime, 5%);
+      //     transform: scale(1.05);
+      //   }
+      // }
+
+  }
+}
+@media (max-width: 768px) {
+  .frame.frame-participi-section{
+    padding: 30px;
+
+    h2 {
+      span{
+        font-size: 36px;
+      }
+      
+    }
+    
+  }  
+  }

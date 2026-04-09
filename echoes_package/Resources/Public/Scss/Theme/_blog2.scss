@@ -1,0 +1,153 @@
+// Colors & Variables
+$primary-lime: #a8cf45;
+$white: #ffffff;
+$text-muted: rgba(255, 255, 255, 0.7);
+$card-bg: rgba(0, 0, 0, 0.85); // High opacity for that deep dark look
+$card-bg-transparent: rgba(0, 0, 0, 0.7); // The dark transparency from the image
+$white: #ffffff;
+$border-radius: 15px;
+$card-bg: rgba(0, 0, 0, 0.8); // Dark transparent background
+$white: #ffffff;
+$radius: 20px;
+$font-Fraunces: 'Fraunces', serif; 
+$font-Inter: 'Inter 18pt', sans-serif; 
+$font-Raleway:'Raleway', sans-serif; 
+$font-Oswald: 'Oswald', sans-serif;
+
+// Main Section Wrapper
+.frame.frame-blog-section {
+  background-image: url('/fileadmin/user_upload/musi.png');
+  background-size: cover;
+  padding: 40px 0;
+  color: $white;
+
+
+  // Heading Area (TYPO3 container for top text)
+  .ce-container {
+    text-align: center;
+    margin-bottom: 50px;
+
+    .text-primary {
+      font-family: $font-Raleway;
+      color: $white !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.875rem;
+      font-weight: 300;
+    }
+
+    h3 {
+      font-family: $font-Fraunces;
+      font-size: 4.5rem;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+  }
+
+
+  .blog-cards {
+    display: flex;
+    gap: 1px;
+    max-width: 1500px;
+    margin: 0 0px;
+    align-items: flex-start;
+  
+  
+    .blog-card {
+      flex: 1;
+      background: transparent; // The wrapper itself is invisible
+      display: flex;
+      flex-direction: column;
+      padding: 0px 8px !important;
+      // Target the specific TYPO3 frame containers
+    #c258 {
+      margin: 0 !important;   // Overrides TYPO3's default bottom margin
+      padding: 0 !important;  // Overrides TYPO3's default padding
+      line-height: 0;         // Collapses the container to the image height
+    }
+  
+      // The Image Part
+      .frame-type-image {
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 0 !important;      // Crucial: Removes vertical space for text baselines
+        font-size: 0 !important;        // Extra safety to collapse white space
+  
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin: 0 !important;
+          padding: 0 !important;
+          border-radius: $radius $radius 0 0;
+        }
+      }
+  
+      // The Attached Content Box
+      .frame-type-text {
+        background: $card-bg;
+        margin-top: 0 !important;       // Ensures it snaps to the image above
+        padding: 35px 25px;
+        text-align: center;
+        border-radius: 0 0 $radius $radius; // Round only the bottom corners
+        backdrop-filter: blur(10px); // Gives it that premium "glass" feel
+        // Clean up any default paragraph margins at the top
+      p:first-child, h4:first-child {
+        margin-top: 0;
+      }
+        
+        // Title
+        h4 {
+          font-family: $font-Inter;
+          color: $white;
+          font-size: 1.25rem;
+          font-weight: 400;
+          margin-bottom: 8px;
+          letter-spacing: 0.5px;
+        }
+  
+        // Date - Bold & White
+        .text-primary {
+          font-family: $font-Oswald;
+          display: block;
+          color: $white;
+          font-weight: 700;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 25px;
+        }
+  
+        // Paragraph text
+        p {
+          font-family: $font-Raleway;
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 1.063rem;
+          line-height: 1.7;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+  }
+.frame-type-text{
+  .btn-discover, a[title="Descopera"] {
+    display: inline-block;
+    background-color: $primary-lime !important;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+    margin-top: 20px;
+        
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+}

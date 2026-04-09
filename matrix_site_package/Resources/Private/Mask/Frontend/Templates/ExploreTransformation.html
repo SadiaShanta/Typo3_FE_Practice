@@ -1,0 +1,134 @@
+<section class="scroll-section">
+
+    <div class="sticky-wrapper">
+
+        <!-- INTRO -->
+        <div class="intro">
+            <f:if condition="{data.header}">
+                <h1>{data.header}</h1>
+            </f:if>
+
+            <f:if condition="{data.tx_mask_bodytext}">
+                <p>{data.tx_mask_bodytext -> f:format.html()}</p>
+            </f:if>
+        </div>
+
+        <!-- MAP CONTAINER -->
+        <div class="map-container">
+
+            <!-- MAP IMAGE -->
+            <f:if condition="{data.tx_mask_image}">
+                <f:for each="{data.tx_mask_image}" as="file">
+                    <f:image image="{file}" class="map-bg" />
+                </f:for>
+            </f:if>
+
+            <!-- MARKERS -->
+            <f:if condition="{data.tx_mask_markers}">
+                <f:for each="{data.tx_mask_markers}" as="marker">
+                    <div class="marker"style="
+                    top:{marker.tx_mask_top_position -> f:or(alternative:0)}%;
+                    left:{marker.tx_mask_left_position -> f:or(alternative:0)}%;
+     ">
+                        {marker.tx_mask_marker_name}
+            
+                    </div>
+                </f:for>
+            </f:if>
+
+            <!-- ZOOM BUTTONS -->
+            <div class="zoom-controls">
+                <button class="zoom-btn zoom-in">+</button>
+                <button class="zoom-btn zoom-out">−</button>
+            </div>
+
+            <!-- PROJECT PANEL -->
+            <div class="project-panel">
+
+                <div class="panel-toggle">❮</div>
+
+                <h3>Projects</h3>
+
+                <f:if condition="{data.tx_mask_markers}">
+                    <f:for each="{data.tx_mask_markers}" as="marker">
+                        <p>{marker.tx_mask_marker_name}</p>
+                    </f:for>
+                </f:if>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    
+      const section = document.querySelector(".scroll-section");
+      if (!section) return;
+    
+      const intro = section.querySelector(".intro");
+      const markers = section.querySelectorAll(".marker");
+      const panel = section.querySelector(".project-panel");
+      const toggleBtn = section.querySelector(".panel-toggle");
+      const maps = section.querySelectorAll(".map-bg");
+      const zoomControls = section.querySelector(".zoom-controls");
+      const zoomInBtn = section.querySelector(".zoom-in");
+      const zoomOutBtn = section.querySelector(".zoom-out");
+    
+      let zoomLevel = 1;
+    
+      /* SCROLL */
+      window.addEventListener("scroll", () => {
+    
+        const rect = section.getBoundingClientRect();
+    
+        // stop processing when far away
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+    
+        const rawProgress = -rect.top / window.innerHeight;
+        const progress = Math.min(Math.max(rawProgress, 0), 1.5);
+    
+        if (intro) {
+          intro.style.opacity = progress > 0.25 ? "0" : "1";
+        }
+    
+        if (progress > 0.5) {
+          markers.forEach(m => m.classList.add("show"));
+          zoomControls?.classList.add("show");
+          toggleBtn?.classList.add("show");
+        } else {
+          markers.forEach(m => m.classList.remove("show"));
+          zoomControls?.classList.remove("show");
+          toggleBtn?.classList.remove("show");
+        }
+    
+        panel?.classList.toggle("show", progress > 0.75);
+      });
+    
+      /* ZOOM */
+      zoomInBtn?.addEventListener("click", () => {
+        zoomLevel += 0.2;
+        maps.forEach(map => {
+          map.style.transform = `scale(${zoomLevel})`;
+        });
+      });
+    
+      zoomOutBtn?.addEventListener("click", () => {
+        zoomLevel = Math.max(1, zoomLevel - 0.2);
+        maps.forEach(map => {
+          map.style.transform = `scale(${zoomLevel})`;
+        });
+      });
+    
+      /* PANEL TOGGLE */
+      toggleBtn?.addEventListener("click", () => {
+        if (!panel) return;
+        panel.classList.toggle("show");
+        toggleBtn.textContent = panel.classList.contains("show") ? "❮" : "❯";
+      });
+    
+    });
+    </script>

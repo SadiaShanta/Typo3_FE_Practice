@@ -1,0 +1,75 @@
+//
+// Variables
+//
+@import "variables";
+@import "fonts";
+@import "footer";
+@import "header";
+@import "hero";
+@import "secondPage";
+@import "pilonii";
+@import "etape";
+@import "blog";
+@import "mail";
+@import "intrebari";
+@import "participi";
+@import "conectare";
+@import "artists";
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+
+.frame-option-hero-image {
+    padding: 64px 0!important;
+    h1 {
+        padding-bottom: 20px!important;
+    }
+}
+$button-lime: #a3bc39;
+.btn.btn-primary{
+          display: inline-block !important;
+          background-color: $button-lime !important;
+          color: white !important;
+          padding: 12px 35px !important;
+          border-radius: 8px !important;
+          border-color: $button-lime !important;
+          text-decoration: none !important;
+          font-weight: bold !important;
+          text-transform: uppercase !important;
+          font-size: 14px !important;
+          transition: opacity 0.3s ease !important;
+          &:hover {
+            background-color: darken(#7e961d, 10%);
+            border-color: darken(#7e961d, 10%);
+            color: #fff!important;
+        }
+}
+.btn.btn-outline-primary{
+    display: inline-block !important;
+          color: $button-lime !important;
+          padding: 12px 35px !important;
+          border-radius: 8px !important;
+          border-color: $button-lime !important;
+          text-decoration: none !important;
+          font-weight: bold !important;
+          text-transform: uppercase !important;
+          font-size: 14px !important;
+          transition: opacity 0.3s ease !important;
+          &:hover {
+            background-color: darken(#98B527, 10%);
+            border-color: darken(#98B527, 10%);
+            color: #fff!important;
+        }
+}
+@media (max-width: 768px) {
+    .btn.btn-primary{
+        padding: 10px 24px !important;
+        font-size: 12px !important;
+    }
+    .btn.btn-outline-primary{
+              padding: 10px 24px !important;
+              font-size: 12px !important;
+            
+    }
+}

@@ -1,0 +1,58 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="site-footer">
+
+    <!-- TOP FOOTER -->
+    <div class="footer-main">
+        <div class="footer-inner">
+
+            <!-- LEFT: PHONE -->
+            <div class="footer-contact footer-contact-left">
+                <span class="footer-label">Phone</span>
+                <span class="footer-value">1-800-123-4567</span>
+            </div>
+
+            <!-- CENTER: LOGO / NAME -->
+            <div class="footer-brand">
+                <span class="footer-brand-name">echoes</span>
+
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">F</a>
+                    <a href="#" aria-label="Twitter">X</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="LinkedIn">IN</a>
+                </div>
+            </div>
+
+            <!-- RIGHT: EMAIL -->
+            <div class="footer-contact footer-contact-right">
+                <span class="footer-label">Email</span>
+                <a class="footer-value" href="mailto:info@site.com">
+                    info@site.com
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BOTTOM FOOTER -->
+    <div class="footer-bottom">
+        <div class="footer-inner footer-bottom-inner">
+
+            <div class="footer-links">
+                <a href="#">Politica de confidențialitate</a>
+                <a href="#">Termeni și condiții</a>
+                <a href="#">Setări cookies</a>
+            </div>
+
+            <div class="footer-copy">
+                © {now -> f:format.date(format:'Y')} Echoes. All rights reserved.
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</html>

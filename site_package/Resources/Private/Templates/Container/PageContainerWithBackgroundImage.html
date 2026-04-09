@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+<f:section name="Main">
+    
+    <f:comment>Build background style from background_image field</f:comment>
+    <f:variable name="backgroundStyle"></f:variable>
+    
+    <f:if condition="{backgroundImage.0}">
+        <f:variable name="backgroundImageUrl">{f:uri.image(image: backgroundImage.0, absolute: 1, maxWidth: 1920)}</f:variable>
+        
+        <f:comment>Background image with default cover behaviour</f:comment>
+        <f:variable name="backgroundStyle">background-image: url('{backgroundImageUrl}'); background-size: cover; background-position: center center; background-repeat: no-repeat; min-height: 797px;</f:variable>
+    </f:if>
+    
+    <f:comment>Container classes</f:comment>
+
+
+<f:variable name="frameSize">frame-size-default</f:variable>
+<f:variable name="frameClass">frame-{data.frame_class}</f:variable>
+<f:variable name="typeClass">frame-type-{data.CType}</f:variable>
+<f:variable name="layoutClass">frame-layout-{data.frame_layout}</f:variable>
+<f:variable name="optionsClass">frame-options-{data.frame_options}</f:variable>
+<f:variable name="backgroundClass">frame-background-{f:if(condition: data.background_color_class, else: 'none', then: data.background_color_class)}</f:variable>
+<f:variable name="spaceBeforeClass">frame-space-before-{f:if(condition: data.space_before_class, else: 'none', then: data.space_before_class)}</f:variable>
+<f:variable name="spaceAfterClass">frame-space-after-{f:if(condition: data.space_after_class, else: 'none', then: data.space_after_class)}</f:variable>
+
+<div id="c{data.uid}" class="frame {frameSize} {frameClass} {typeClass} {layoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass} {optionsClass} frame-option-image-hover"{f:if(condition: animationSettings, then: '{animationSettings -> f:format.raw()}')}>
+
+    <f:variable name="containerClass">ce-page-container-background</f:variable>
+    
+    <div class="{containerClass}" style="{backgroundStyle}">
+        <f:for each="{children_101}" as="record">
+            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
+        </f:for>
+    </div>
+    </div>
+</f:section>
+</html>

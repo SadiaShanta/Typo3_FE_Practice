@@ -1,0 +1,114 @@
+/* ===============================
+   NAVIGATION STYLING
+================================= */
+
+.navbar-nav {
+
+    .nav-item {
+  
+      .nav-link {
+        position: relative;
+        color: #122A07;
+        //font-family: "Oswald", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight:700;
+        line-height: 19px;
+        letter-spacing:  1.7px;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          color: #1f4d0f;
+        }
+  
+        /* Optional underline animation */
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 1rem;
+          width: 0;
+          height: 2px;
+          background-color: #122A07;
+          transition: width 0.3s ease;
+        }
+  
+        &:hover::after {
+          width: calc(100% - 2rem);
+        }
+      }
+    }
+  }
+  
+  
+/* ===============================
+    MOBILE NAVIGATION STYLING
+================================= */
+
+@media (max-width: 767px) { // Standard Bootstrap breakpoint for mobile/tablet
+  .navbar-nav {
+    padding: 20px 0;
+    
+    .nav-item {
+      width: 100%; // Ensure links span the full width
+      border-bottom: 1px solid rgba(18, 42, 7, 0.1); // Optional: add separators
+      
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .nav-link {
+        padding: 15px 20px; // Larger touch targets
+        font-size: 16px;     // Slightly larger font for readability
+        display: block;      // Ensure the whole row is clickable
+        
+        // Remove the desktop underline animation for mobile
+        &::after {
+          display: none;
+        }
+
+        &:hover, &:active {
+          background-color: rgba(152, 181, 39, 0.1); // Subtle highlight on tap
+          color: #1f4d0f;
+          padding-left: 25px; // Optional: subtle shift right on interaction
+        }
+      }
+    }
+  }
+.container-mainnavigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // Keeps items spread out
+
+    .navbar-brand {
+      // Moves logo to the center (visual position 2)
+      order: 2; 
+      margin-right: auto;
+      margin-left: auto;
+      
+      // If the login button on the right pushes the logo off-center, 
+      // we compensate for its width or ensure the logo is absolute.
+      position: relative;
+      left: -10px; // Slight adjustment if the Login button is wider than the hamburger
+    }
+
+    .navbar-toggler {
+      // Moves hamburger to the left (visual position 1)
+      order: 1;
+      margin-right: 0;
+      border: none; // Optional: cleans up the look
+      padding-left: 0;
+    }
+
+    .btn.btn-primary {
+      // Keeps Login button on the right (visual position 3)
+      order: 3;
+      padding: 10px 24px !important;
+      margin-left: 0;
+    }
+  }
+
+
+}

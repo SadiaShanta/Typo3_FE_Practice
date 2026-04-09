@@ -1,0 +1,199 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "explore_transformation": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_bodytext",
+                        "tx_mask_image",
+                        "tx_mask_markers"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "explore_transformation",
+                    "label": "Explore Transformation",
+                    "labels": [
+                        "",
+                        "Bodytext",
+                        "Image",
+                        "Markers"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 2
+                }
+            },
+            "sql": {
+                "tx_mask_bodytext": {
+                    "tt_content": {
+                        "tx_mask_bodytext": "mediumtext"
+                    }
+                },
+                "tx_mask_image": {
+                    "tt_content": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_markers": {
+                    "tt_content": {
+                        "tx_mask_markers": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "tx_mask_bodytext": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "richtextConfiguration": "matrix_site_package",
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_bodytext",
+                    "key": "bodytext",
+                    "type": "richtext"
+                },
+                "tx_mask_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image",
+                    "imageoverlayPalette": 1,
+                    "key": "image",
+                    "type": "file"
+                },
+                "tx_mask_markers": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_markers",
+                    "key": "markers",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_markers": {
+            "sql": {
+                "tx_mask_left_position": {
+                    "tx_mask_markers": {
+                        "tx_mask_left_position": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_marker_description": {
+                    "tx_mask_markers": {
+                        "tx_mask_marker_description": "mediumtext"
+                    }
+                },
+                "tx_mask_marker_name": {
+                    "tx_mask_markers": {
+                        "tx_mask_marker_name": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_top_position": {
+                    "tx_mask_markers": {
+                        "tx_mask_top_position": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_left_position": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "number"
+                    },
+                    "fullKey": "tx_mask_left_position",
+                    "inlineParent": "tx_mask_markers",
+                    "key": "left_position",
+                    "label": "Left Position",
+                    "order": 3,
+                    "type": "integer"
+                },
+                "tx_mask_marker_description": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "richtextConfiguration": "matrix_site_package",
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_marker_description",
+                    "inlineParent": "tx_mask_markers",
+                    "key": "marker_description",
+                    "label": "Marker Description",
+                    "order": 4,
+                    "type": "richtext"
+                },
+                "tx_mask_marker_name": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_marker_name",
+                    "inlineParent": "tx_mask_markers",
+                    "key": "marker_name",
+                    "label": "Marker Name",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_top_position": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "number"
+                    },
+                    "fullKey": "tx_mask_top_position",
+                    "inlineParent": "tx_mask_markers",
+                    "key": "top_position",
+                    "label": "Top Position",
+                    "order": 2,
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

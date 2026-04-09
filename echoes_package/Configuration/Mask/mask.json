@@ -1,0 +1,130 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "artist_grid": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_artists"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "artist_grid",
+                    "label": "Artist Grid",
+                    "labels": [
+                        "",
+                        "Artists"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                }
+            },
+            "sql": {
+                "tx_mask_artists": {
+                    "tt_content": {
+                        "tx_mask_artists": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "tx_mask_artists": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_artists",
+                    "key": "artists",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_artists": {
+            "sql": {
+                "tx_mask_description_": {
+                    "tx_mask_artists": {
+                        "tx_mask_description_": "mediumtext"
+                    }
+                },
+                "tx_mask_image": {
+                    "tx_mask_artists": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_description_": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "richtextConfiguration": "echoes_package",
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_description_",
+                    "inlineParent": "tx_mask_artists",
+                    "key": "description_",
+                    "label": "Description",
+                    "order": 1,
+                    "type": "richtext"
+                },
+                "tx_mask_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_artists",
+                    "key": "image",
+                    "label": "Background Image",
+                    "order": 2,
+                    "type": "file"
+                }
+            }
+        }
+    }
+}

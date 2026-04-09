@@ -1,0 +1,108 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 4rem;
+  }
+  
+  .hero-header {
+    font-family: "Funnel Display", sans-serif;
+    font-size: 5.563rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    line-height: 5.313rem;
+    display: inline-block;
+    white-space: pre-line;
+    color: #fff;
+  }
+  
+  .hero-bodytext {
+    font-size: 5.563rem;
+    margin-top: 1rem;
+    opacity: 0.9;
+    font-weight:700;
+    color:black;
+  }
+  
+  .hero-right {
+    width: 40%;
+    text-align: right;
+  }
+  .hero-changes {
+    list-style: none;       /* removes bullets */
+    padding: 0;             /* removes default list padding */
+    margin: 0 0 0.5rem 0;  
+    position: relative;
+    height: 3rem; /* slightly taller to fit 24px text comfortably */
+    overflow: hidden; /* adds spacing before hero-bodytext-right */
+    white-space: nowrap;
+  }
+  
+  .hero-change-text {
+    position: absolute;
+    top: 0;                   /* ✅ forces all texts to overlap */
+    left: 0;
+    opacity: 0;
+    font-family: "Lexend", sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    transform: translateY(100%); 
+    animation: textFade 12s infinite;
+    white-space: nowrap;
+  }
+  
+  .hero-change-text:nth-child(1) { animation-delay: 0s; }
+  .hero-change-text:nth-child(2) { animation-delay: 3s; }
+  .hero-change-text:nth-child(3) { animation-delay: 6s; }
+  .hero-change-text:nth-child(4) { animation-delay: 9s; }
+  
+  @keyframes textFade {
+    0% { opacity: 0; transform: translateY(100%); }
+    5% { opacity: 1; transform: translateY(0); }
+    25% { opacity: 1; transform: translateY(0); }
+    30% { opacity: 0; transform: translateY(-100%); }
+    100% { opacity: 0; transform: translateY(-100%); }
+  }
+  
+  .hero-bodytext-right {
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: -0.02em; /* -2% */
+    color: #ffffff;
+    opacity: 0.9; 
+    text-align: left;
+  }
+  

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2025-10-28UTC07:28:480">
+        <header>
+            <authorName>Calin</authorName>
+            <authorEmail>calin@reea.net</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="containerGroup.hero">
+                <source>Hero Elements</source>
+            </trans-unit>
+            <trans-unit id="heroSlider.title">
+                <source>Hero ScrollTrigger Slider</source>
+            </trans-unit>
+            <trans-unit id="heroSlider.description">
+                <source>Horizontal scroll-based hero section slider</source>
+            </trans-unit>
+            <trans-unit id="heroSlide.title">
+                <source>Hero Slide</source>
+            </trans-unit>
+            <trans-unit id="heroSlide.description">
+                <source>Single slide in the hero section</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

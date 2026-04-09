@@ -1,0 +1,21 @@
+{
+    "name": "reea-digital-limited/echoes-package",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://fetypo3.ddev.site:4430/echoes/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "bk2k/bootstrap-package": "^15.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ReeaDigitalLimited\\EchoesPackage\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "echoes_package"
+        }
+    }
+}

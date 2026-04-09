@@ -1,0 +1,130 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "showcase_cards": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_showcase_card_items"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "showcase_cards",
+                    "label": "Showcase Cards",
+                    "labels": [
+                        "",
+                        "Showcase Card Items"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                }
+            },
+            "sql": {
+                "tx_mask_showcase_card_items": {
+                    "tt_content": {
+                        "tx_mask_showcase_card_items": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "tx_mask_showcase_card_items": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_showcase_card_items",
+                    "key": "showcase_card_items",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_showcase_card_items": {
+            "sql": {
+                "tx_mask_showcase_card_bodytext": {
+                    "tx_mask_showcase_card_items": {
+                        "tx_mask_showcase_card_bodytext": "mediumtext"
+                    }
+                },
+                "tx_mask_showcase_card_image": {
+                    "tx_mask_showcase_card_items": {
+                        "tx_mask_showcase_card_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_showcase_card_bodytext": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "richtextConfiguration": "matrix_site_package",
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_showcase_card_bodytext",
+                    "inlineParent": "tx_mask_showcase_card_items",
+                    "key": "showcase_card_bodytext",
+                    "label": "Bodytext",
+                    "order": 1,
+                    "type": "richtext"
+                },
+                "tx_mask_showcase_card_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_showcase_card_image",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_showcase_card_items",
+                    "key": "showcase_card_image",
+                    "label": "Image",
+                    "order": 2,
+                    "type": "file"
+                }
+            }
+        }
+    }
+}

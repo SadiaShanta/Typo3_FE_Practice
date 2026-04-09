@@ -1,0 +1,199 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "hero_video": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_hero_bodytext",
+                        "tx_mask_hero_image",
+                        "tx_mask_hero_video",
+                        "tx_mask_hero_changes_item",
+                        "tx_mask_hero_bodytext_right"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "hero_video",
+                    "label": "Hero Video",
+                    "labels": [
+                        "Title",
+                        "Bodytext",
+                        "Image ",
+                        "Media file ",
+                        "Repeat Changes Items",
+                        "Body Text Right "
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                }
+            },
+            "sql": {
+                "tx_mask_hero_bodytext": {
+                    "tt_content": {
+                        "tx_mask_hero_bodytext": "mediumtext"
+                    }
+                },
+                "tx_mask_hero_bodytext_right": {
+                    "tt_content": {
+                        "tx_mask_hero_bodytext_right": "mediumtext"
+                    }
+                },
+                "tx_mask_hero_changes_item": {
+                    "tt_content": {
+                        "tx_mask_hero_changes_item": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_hero_image": {
+                    "tt_content": {
+                        "tx_mask_hero_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_hero_video": {
+                    "tt_content": {
+                        "tx_mask_hero_video": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "tx_mask_hero_bodytext": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "richtextConfiguration": "site_package",
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_hero_bodytext",
+                    "key": "hero_bodytext",
+                    "type": "richtext"
+                },
+                "tx_mask_hero_bodytext_right": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "richtextConfiguration": "site_package",
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_hero_bodytext_right",
+                    "key": "hero_bodytext_right",
+                    "type": "richtext"
+                },
+                "tx_mask_hero_changes_item": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_hero_changes_item",
+                    "key": "hero_changes_item",
+                    "type": "inline"
+                },
+                "tx_mask_hero_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_hero_image",
+                    "imageoverlayPalette": 1,
+                    "key": "hero_image",
+                    "type": "file"
+                },
+                "tx_mask_hero_video": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileByUrlAllowed": 1,
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_hero_video",
+                    "key": "hero_video",
+                    "onlineMedia": [
+                        "youtube",
+                        "vimeo"
+                    ],
+                    "type": "media"
+                }
+            }
+        },
+        "tx_mask_hero_changes_item": {
+            "sql": {
+                "tx_mask_text_changes": {
+                    "tx_mask_hero_changes_item": {
+                        "tx_mask_text_changes": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_text_changes": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_text_changes",
+                    "inlineParent": "tx_mask_hero_changes_item",
+                    "key": "text_changes",
+                    "label": "Text Changes",
+                    "order": 1,
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

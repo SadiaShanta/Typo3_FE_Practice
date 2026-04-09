@@ -1,0 +1,34 @@
+# ...existing code...
+# ==================================================
+# Frame Options - Centralized configuration
+# ==================================================
+#
+# This file contains the configuration for frame_options
+# so we avoid duplicating code
+
+# List of all custom options that must be removed for menus
+# NOTE: In PageTsConfig we cannot use variables, but we can better organize the code
+
+# Frame Options for all content elements
+TCEFORM.tt_content.frame_options {
+    # Remove default options that are not needed
+    removeItems = ruler-before, ruler-after, indent, indent-left, indent-right
+
+    
+    
+    # Custom options for all content elements
+    addItems {
+        hero-image = Hero Image
+        
+    }
+        types {
+            ce_container {
+            removeItems = ruler-before, ruler-after, indent, indent-left, indent-right
+            # Add only the specific option(s)
+            addItems {
+                blog-box = Blog Box
+                }
+            }
+        }
+    
+}

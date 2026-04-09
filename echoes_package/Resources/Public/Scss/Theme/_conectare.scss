@@ -1,0 +1,165 @@
+// Variables for consistency
+$primary-green: #122A08; // Dark green for "Suntem aici"
+$bg-cream: #f9f9f5;
+$font-Fraunces: 'Fraunces', serif; 
+$font-Inter: 'Inter 18pt', sans-serif; 
+$font-Raleway:'Raleway', sans-serif; 
+$font-Oswald: 'Oswald', sans-serif;
+
+.frame.frame-conectare-section{
+    padding: 0 !important;
+    margin: 0 !important;
+  
+//.conectare-section {
+  background-color: $bg-cream;
+  padding: 80px 0;
+  color: $primary-green;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .conectares {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  // Left Column (col-md-7)
+  .conectare1 {
+    flex: 0 0 calc(58.33% - 15px); // Approximates col-7
+    
+    .text-primary {
+      color: $primary-green !important; 
+      font-family: $font-Inter;
+      font-weight: 500;
+      text-transform: capitalize;
+      font-size: 2.125rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    h3 {
+      font-family: $font-Fraunces;
+      font-size: 4.5rem;
+      margin: 10px 0 25px 0;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 90%;
+    }
+  }
+
+ // Right Column (col-md-5)
+.conectare2 {
+    flex: 0 0 calc(41.66% - 15px);
+    display: flex;
+    flex-direction: column;
+    gap: 1px; // Gap between Email, Telefon, and Birou blocks
+    padding-top: 15px;
+   
+  
+    .frame-default {
+      display: grid !important;
+      // Column 1: Icon (30px), Column 2: Text (remaining space)
+      grid-template-columns: 30px 1fr; 
+      // Row 1: Header, Row 2: Detail text
+      grid-template-rows: auto auto; 
+      column-gap: 15px; 
+      align-items: center; // Vertically centers icon with the first row (Title)
+  
+      &::before {
+        content: '';
+        grid-column: 1;
+        grid-row: 1 / span 2; // Icon spans both rows
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        align-self: start; // Keeps icon at the top of the "Email" text
+        margin-top: 2px;   // Fine-tune vertical alignment with header text
+      }
+  
+      h4 {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 1.3rem;
+        color: #000;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $primary-green
+   
+      }
+  
+      p, a {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 4px 0 0 0 !important;
+        padding: 0 !important;
+        color: $primary-green !important; 
+        font-size: 1.25rem;
+        font-weight: 400;
+        display: block;
+        line-height: 1.4;
+      }
+    }
+  
+    // Icon assignments
+    #c179::before { background-image: url('/fileadmin/user_upload/Echoes/mail.png'); }
+    #c180::before { background-image: url('/fileadmin/user_upload/Echoes/call.png'); }
+    #c181::before { background-image: url('/fileadmin/user_upload/Echoes/location_on.png'); }
+  }
+
+  // Full width Map Image
+  .image {
+    margin-top: 50px;
+    width: 100%;
+
+    .image-embed-item {
+      width: 100%;
+      height: auto;
+      border-radius: 4px; // Slight rounding often seen in Figma
+      display: block;
+    }
+  }
+// }
+}
+// Responsive adjustments
+@media (max-width: 768px) {
+  .conectare-section {
+    .conectare1, .conectare2 {
+      flex: 0 0 100%;
+    }
+    
+    .conectare1 h3 {
+      font-size: 2.5rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .frame.frame-conectare-section{
+
+  .conectares {
+    margin: 0 20px;
+
+    h3 {
+      font-size: 36px;
+
+    }
+  }
+  .conectare1 {
+    flex: none; 
+  }
+}
+}
+

@@ -1,0 +1,304 @@
+/* ======================= */
+/* BASE DESKTOP STYLES     */
+/* ======================= */
+
+.process-wrap {
+  overflow: hidden;
+
+  .ce-container {
+    h2 {
+      color: #2E3E75;
+      font-weight: 700;
+      font-size: 2.75rem;
+      line-height: 2.75rem;
+    }
+
+    .row {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Slide 1 */
+    &.slide1 {
+      background: #FFF url('/fileadmin/user_upload/Slide_1.png') no-repeat;
+      background-position: 10vw calc(100% - 100px);
+
+      .col-md:first-child { }
+      .col-md:nth-child(2) { }
+      .col-md:nth-child(3) { }
+    }
+
+    /* Slide 2 */
+    &.slide2 {
+      background: #FDF6E3 url('/fileadmin/user_upload/Slide_2.png') no-repeat;
+      background-position: 10vw calc(100% - 100px);
+    }
+
+    /* Slide 3 */
+    &.slide3 {
+      background: #FFF url('/fileadmin/user_upload/Slide_3.png') no-repeat;
+      background-position: calc(100% - 100px) calc(100% - 100px);
+    }
+
+    /* Slide 4 */
+    &.slide4 {
+      background-color: #FDF6E3;
+      background-image: url('/fileadmin/user_upload/Standing_Baloon.png'),
+        url('/fileadmin/user_upload/upside-down-Baloon.png');
+      background-repeat: no-repeat, no-repeat;
+      background-position: 60vw -20vh, 5vw calc(100% - 100px);
+      background-size: 400px, auto;
+
+      .colRight p {
+        background-image: url('/fileadmin/user_upload/Thinking.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 600px;
+        height: 300px;
+        padding: 60px 80px;
+        font-size: 25px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #2E3E75;
+      }
+    }
+
+    .col-md {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    .col-md:first-child {
+      margin-left: 10vw;
+    }
+
+    .col-md:last-child {
+      margin-right: 10vw;
+    }
+  }
+}
+
+.process {
+  width: 400%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-self: center;
+  height: 100vh !important;
+
+  &__item {
+    width: 100vw !important;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 30px;
+      display: block;
+    }
+
+    .ce-container {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* Page text */
+#c28 {
+  .text-primary {
+    color: #9EA3B5 !important; 
+    font-family: 'Funnel Display', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  h2:nth-of-type(2) {
+    color: #2E3E75;
+    font-family: 'Funnel Display', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  #c31 p {
+    color: #9EA3B5;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    padding: 10px;
+  }
+}
+
+
+/* 3-column layout */
+#c32 {
+  .row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .ce-col {
+      flex: 1 1 calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+
+      .ce-image img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+/* ======================= */
+/* TABLET RESPONSIVE (≤992) */
+/* ======================= */
+
+@media screen and (max-width: 992px) {
+
+  .process {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .process__item {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  
+  .process-wrap {
+    overflow: visible !important;
+  }
+
+  /* SLIDE 1 */
+  .process-wrap .ce-container.slide1 {
+    padding-bottom: 60px;
+    background-position-y: calc(100% + 0px);
+
+    .col-md:first-child { order: 1; }
+    .col-md:nth-child(2) { order: 3; }
+    .col-md:nth-child(3) { order: 2; }
+  }
+
+  /* SLIDE 2 */
+  .process-wrap .ce-container.slide2 {
+    padding-bottom: 70px;
+    background-position-x: -46vw;
+
+    .col-md:first-child { order: 3; }
+    .col-md:nth-child(2) { order: 1; }
+    .col-md:nth-child(3) { order: 2; }
+  }
+
+  /* SLIDE 3 */
+  .process-wrap .ce-container.slide3 {
+    padding-bottom: 70px;
+    background-position-x: -292vw;
+
+    .col-md:first-child { order: 1; }
+    .col-md:nth-child(2) { order: 3; }
+    .col-md:nth-child(3) { order: 2; }
+  }
+
+  /* SLIDE 4 */
+  .process-wrap .ce-container.slide4 {
+    padding: 180px 0 200px;
+    background-position: 52vw -16vh, 0 bottom;
+
+    .colRight p {
+      width: 90%;
+      padding: 40px 30px;
+      font-size: 16px;
+      line-height: 24px;
+      height: auto;
+      background-size: cover;
+    }
+  }
+
+  /* GENERAL COLUMNS */
+  .process-wrap .col-md:first-child {
+    margin-left: 20px !important;
+  }
+
+  .process-wrap .col-md:last-child {
+    margin-right: 20px !important;
+  }
+
+  /* THREE COLUMN SECTION */
+  #c32 .row .ce-col {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+/* ======================= */
+/* MOBILE RESPONSIVE       */
+/* ======================= */
+
+@media screen and (max-width: 768px) {
+
+  .process {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .process__item {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  
+  .process-wrap {
+    overflow: visible !important;
+  }
+  
+  .hero-image-wrapper {
+    margin-top: 0;
+    height: 100vh;
+  }
+
+  .process__item span {
+    font-size: 22px;
+  }
+
+  .process-wrap .col-md p {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 20px;
+  }
+
+  .process-wrap .col-md h2 {
+    width: 90%;
+  }
+}
+
+/* MOBILE SMALL (≤600px) */
+@media screen and (max-width: 600px) {
+  #c32 .row .ce-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,167 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "stacked_pages": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_stack_pages_items",
+                        "tx_mask_stack_pages_name"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "stacked_pages",
+                    "label": "Stacked Pages",
+                    "labels": [
+                        "",
+                        "Stack Items",
+                        "Stack Pages Name "
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "sql": {
+                "tx_mask_stack_pages_items": {
+                    "tt_content": {
+                        "tx_mask_stack_pages_items": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_stack_pages_name": {
+                    "tt_content": {
+                        "tx_mask_stack_pages_name": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "tx_mask_stack_pages_items": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_stack_pages_items",
+                    "key": "stack_pages_items",
+                    "type": "inline"
+                },
+                "tx_mask_stack_pages_name": {
+                    "config": {
+                        "eval": "trim,lower",
+                        "nullable": 0,
+                        "required": 1,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_stack_pages_name",
+                    "key": "stack_pages_name",
+                    "type": "string"
+                }
+            }
+        },
+        "tx_mask_stack_pages_items": {
+            "sql": {
+                "tx_mask_stack_pages_bodytext": {
+                    "tx_mask_stack_pages_items": {
+                        "tx_mask_stack_pages_bodytext": "mediumtext"
+                    }
+                },
+                "tx_mask_stack_pages_image": {
+                    "tx_mask_stack_pages_items": {
+                        "tx_mask_stack_pages_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_stack_pages_number": {
+                    "tx_mask_stack_pages_items": {
+                        "tx_mask_stack_pages_number": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_stack_pages_bodytext": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "richtextConfiguration": "matrix_site_package",
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_stack_pages_bodytext",
+                    "inlineParent": "tx_mask_stack_pages_items",
+                    "key": "stack_pages_bodytext",
+                    "label": "Bodytext ",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_stack_pages_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_stack_pages_image",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_stack_pages_items",
+                    "key": "stack_pages_image",
+                    "label": "Image",
+                    "order": 3,
+                    "type": "file"
+                },
+                "tx_mask_stack_pages_number": {
+                    "config": {
+                        "nullable": 0,
+                        "required": 1,
+                        "type": "number"
+                    },
+                    "fullKey": "tx_mask_stack_pages_number",
+                    "inlineParent": "tx_mask_stack_pages_items",
+                    "key": "stack_pages_number",
+                    "label": "Stack Pages Number",
+                    "order": 1,
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

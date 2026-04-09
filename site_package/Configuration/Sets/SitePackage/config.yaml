@@ -1,0 +1,4 @@
+name: reea/site-package
+label: 'Site Package'
+dependencies:
+  - bootstrap-package/full

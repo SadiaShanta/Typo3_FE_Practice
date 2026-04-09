@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<button class="menu-toggle" type="button"
+        aria-controls="mainnavigation"
+        aria-expanded="false"
+        aria-label="{f:translate(key: 'togglenavigation', extensionName: 'bootstrap_package')}">
+    <span class="menu-icon">
+        <span></span>
+        <span></span>
+    </span>
+    <span class="menu-text">MENU</span>
+</button>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.getElementById('mainnavigation');
+        const bsCollapse = new bootstrap.Collapse(mainNav, { toggle: false });
+    
+        menuToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    
+            if (expanded) {
+                // Close menu
+                bsCollapse.hide();
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Open menu
+                bsCollapse.show();
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+    
+        // Optional: sync with manual close (if user clicks outside or via keyboard)
+        mainNav.addEventListener('hidden.bs.collapse', function () {
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+        mainNav.addEventListener('shown.bs.collapse', function () {
+            menuToggle.setAttribute('aria-expanded', 'true');
+        });
+    });
+    </script>
+    

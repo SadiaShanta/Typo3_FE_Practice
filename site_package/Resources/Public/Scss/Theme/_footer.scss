@@ -1,0 +1,205 @@
+.site-footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 270px;
+  font-family: 'Inter', sans-serif;
+
+  .newsletter {
+    border-bottom: 1px solid #222;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+    h2 {
+      font-family: 'Ballega', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 2.125 rem;
+      line-height: 44px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+
+      .highlight {
+        color: #3b6fff;
+      }
+    }
+
+    p {
+      font-family: 'Gill Sans', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1 rem;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: #b5b5b5;
+      margin: 0;
+    }
+
+    .newsletter-form {
+      input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #666;
+        color: #fff;
+        width: 320px;
+        padding: 8px 5px;
+        font-size: 1 rem;
+        outline: none;
+        font-weight: 200;
+      }
+/* Style the placeholder text */
+      input::placeholder {
+        color: #fff; /* white placeholder */
+        opacity: 1; /* ensure it's fully visible */
+        font-weight: 400; /* make it thicker */
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 4% ;/* optional: looks cleaner */
+        font-size: 1.25 rem;
+      }
+      button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.3rem;
+        margin-left: 8px;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+      button:hover {
+        color: #3b6fff;
+      }
+    }
+  }
+
+  .footer-sections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .footer-column {
+    h3 {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    p {
+      color: #b5b5b5;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.125 rem;
+          font-weight : 400;
+          font-family: 'Ballega',sans-serif;
+          transition: color 0.3s, transform 0.3s;
+          display: inline-block;
+
+          &:hover {
+            color: #3b6fff;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+
+      a {
+        color: #fff;
+        font-size: 1.4rem;
+        transition: color 0.3s, transform 0.3s;
+
+        &:hover {
+          color: #3b6fff;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #b5b5b5;
+
+    p {
+      margin: 0;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 5px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #3b6fff;
+        }
+      }
+
+      span {
+        margin: 0 5px;
+        color: #555;
+      }
+    }
+    .vizgou-box {
+      background: #2a2a2a;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+
+      &:hover {
+        background: #3b6fff;
+        color: #fff;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 40px 30px;
+
+    .footer-sections {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-sections {
+      grid-template-columns: 1fr;
+    }
+
+    .newsletter-form input {
+      width: 100%;
+    }
+  }
+}

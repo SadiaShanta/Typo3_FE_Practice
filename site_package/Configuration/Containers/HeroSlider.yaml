@@ -1,0 +1,10 @@
+identifier: heroSlider
+label: Hero ScrollTrigger Slider
+description: Horizontal scroll-based hero section slider
+icon: content-image
+group: container
+elements:
+ - identifier: heroSlide
+   label: Hero Slide
+   description: Single slide in the hero section
+   icon: content-text

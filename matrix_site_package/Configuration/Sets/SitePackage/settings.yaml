@@ -1,0 +1,33 @@
+plugin:
+  bootstrap_package:
+    settings:
+      scss:
+        primary: '#eb3e4a'
+        secondary: '#013859'
+    view:
+      layoutRootPath: 'EXT:matrix_site_package/Resources/Private/Layouts/'
+      partialRootPath: 'EXT:matrix_site_package/Resources/Private/Partials/'
+      templateRootPath: 'EXT:matrix_site_package/Resources/Private/Templates/'
+  bootstrap_package_contentelements:
+    view:
+      layoutRootPath: 'EXT:matrix_site_package/Resources/Private/Layouts/ContentElements/'
+      partialRootPath: 'EXT:matrix_site_package/Resources/Private/Partials/ContentElements/'
+      templateRootPath: 'EXT:matrix_site_package/Resources/Private/Templates/ContentElements/'
+page:
+  logo:
+    file: 'EXT:matrix_site_package/Resources/Public/Images/logo.svg'
+    fileInverted: 'EXT:matrix_site_package/Resources/Public/Images/logo-inverted.svg'
+    width: 192
+    alt: 'My Site Package'
+    linktitle: 'My Site Package'
+  favicon:
+    file: 'EXT:matrix_site_package/Resources/Public/Icons/favicon.ico'
+  fluidtemplate:
+    layoutRootPath: 'EXT:matrix_site_package/Resources/Private/Layouts/Page/'
+    partialRootPath: 'EXT:matrix_site_package/Resources/Private/Partials/Page/'
+    templateRootPath: 'EXT:matrix_site_package/Resources/Private/Templates/Page/'
+
+
+
+config.concatenateJs: false
+config.concatenateCss: false

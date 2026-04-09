@@ -1,0 +1,27 @@
+<f:if condition="{data.header}">
+    {data.header}
+</f:if>
+<f:if condition="{data.tx_mask_bodytext}">
+    {data.tx_mask_bodytext -> f:format.html()}
+</f:if>
+<f:for each="{data.tx_mask_image}" as="file">
+    <f:image image="{file}" width="200" />
+    {file.description}
+</f:for>
+<f:if condition="{data.tx_mask_markers}">
+    <ul>
+        <f:for each="{data.tx_mask_markers}" as="data_item">
+            <li>
+                <f:if condition="{data_item.tx_mask_marker_name}">
+                    {data_item.tx_mask_marker_name}
+                </f:if>
+                <f:if condition="{data_item.tx_mask_top_position}">
+                    {data_item.tx_mask_top_position}
+                </f:if>
+                <f:if condition="{data_item.tx_mask_marker_description}">
+                    {data_item.tx_mask_marker_description -> f:format.html()}
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</f:if>

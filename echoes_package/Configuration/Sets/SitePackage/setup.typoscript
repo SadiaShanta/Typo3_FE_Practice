@@ -1,0 +1,90 @@
+page {
+    includeCSS {
+        theme = EXT:echoes_package/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        echoes_package_scripts = EXT:echoes_package/Resources/Public/JavaScript/main.js
+    }
+}
+page = PAGE
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        file = EXT:echoes_package/Resources/Private/Templates/Page/Default.html
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = background_image
+                as = backgroundImages
+            }
+        }
+    }
+}
+
+# page {
+#     10 {
+
+#         dataProcessing {
+
+#             10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+#             10 {
+#                 levels = 3
+#                 includeSpacer = 1
+#                 as = mainnavigation
+#                 dataProcessing {
+#                     1628754217 = BK2K\BootstrapPackage\DataProcessing\IconsDataProcessor
+#                     1628754217 {
+#                         iconSet.field = nav_icon_set
+#                         iconIdentifier.field = nav_icon_identifier
+#                         iconFileFieldName = nav_icon
+#                         as = icon
+#                         if {
+#                             isTrue.stdWrap.cObject = COA
+#                             isTrue.stdWrap.cObject {
+#                                 10 = TEXT
+#                                 10.value = 1
+#                                 10.if.isTrue = {$page.theme.navigation.icon.enable}
+#                                 20 = TEXT
+#                                 20.value = 1
+#                                 20.if.isTrue = {$page.theme.navigation.dropdown.icon.enable}
+#                             }
+#                         }
+#                     }
+#                 }
+#             }
+            
+            
+#         }
+#     }
+
+# }
+
+page.10.dataProcessing {
+    100 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+    100 {
+        includeSpacer = 1
+        special = list
+        special.value = 40,41,42,43
+        as = mainnavigation
+    }
+    2000 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+    2000 {
+        special = directory
+        special.value = 54
+        as = footernavigation
+    }
+
+}

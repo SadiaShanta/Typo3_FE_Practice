@@ -1,0 +1,18 @@
+<!-- <f:if condition="{data.header}">
+    {data.header}
+</f:if> -->
+<f:if condition="{data.tx_mask_artists}">
+    <ul>
+        <f:for each="{data.tx_mask_artists}" as="data_item">
+            <li>
+                <f:if condition="{data_item.tx_mask_description}">
+                    {data_item.tx_mask_description -> f:format.html()}
+                </f:if>
+                <f:for each="{data_item.tx_mask_image}" as="file">
+                    <f:image image="{file}" width="200" />
+                    {file.description}
+                </f:for>
+            </li>
+        </f:for>
+    </ul>
+</f:if>

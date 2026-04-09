@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2025-10-28UTC07:28:480">
+        <header>
+            <authorName>Calin</authorName>
+            <authorEmail>calin@reea.net</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.example">
+                <source>Example</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.title">
+                <source>Slider Scroll Horizontal</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.description">
+                <source>A horizontal scrolling slider container with GSAP ScrollTrigger</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.settings">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.showNavigation">
+                <source>Show Navigation Arrows</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.showPagination">
+                <source>Show Pagination Dots</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.scrollSpeed">
+                <source>Scroll Speed</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.scrollSpeed.slow">
+                <source>Slow</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.scrollSpeed.normal">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.scrollSpeed.fast">
+                <source>Fast</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.autoScroll">
+                <source>Auto Scroll with Page Scroll</source>
+            </trans-unit>
+            <trans-unit id="slider_scroll_horizontal.slides">
+                <source>Slides</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.title">
+                <source>Page Container With Background</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.description">
+                <source>A container with optional background image and customizable settings</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.settings">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundImage">
+                <source>Background Image</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundSize">
+                <source>Background Size</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundSize.cover">
+                <source>Cover (fill entire area)</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundSize.contain">
+                <source>Contain (fit entire image)</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundSize.auto">
+                <source>Auto (original size)</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundPosition">
+                <source>Background Position</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundPosition.center">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundPosition.top">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundPosition.bottom">
+                <source>Bottom</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundPosition.left">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundPosition.right">
+                <source>Right</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.backgroundRepeat">
+                <source>Repeat Background</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.containerClass">
+                <source>Container CSS Class</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.isContainerFluid">
+                <source>Full Width Container</source>
+            </trans-unit>
+            <trans-unit id="page_container_background_image.minHeight">
+                <source>Minimum Height (e.g., 400px, 50vh)</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

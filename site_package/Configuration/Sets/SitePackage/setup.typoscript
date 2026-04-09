@@ -1,0 +1,159 @@
+page {
+    includeCSS {
+        theme = EXT:site_package/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        site_package_scripts = EXT:site_package/Resources/Public/JavaScript/main.js
+    }
+}
+
+
+
+lib.footerMenu1 = HMENU
+lib.footerMenu1 {
+    special = directory
+    # UID of the parent page for first column (e.g., “Main pages” folder)
+    special.value = 4
+    1 = TMENU
+    1 {
+        NO {
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.field = title
+            linkWrap = <li>|</li>
+        }
+    }
+}
+
+lib.footerMenu2 = HMENU
+lib.footerMenu2 {
+    special = directory
+    # UID of the parent page for second column
+    special.value = 10
+    1 = TMENU
+    1 {
+        NO {
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.field = title
+            linkWrap = <li>|</li>
+        }
+    }
+}
+
+
+lib.startConversationsLink = TEXT
+lib.startConversationsLink {
+    value = Start the Conversation
+    typolink.parameter = 14
+    typolink.ATagParams = class="cta-button"
+}
+
+# include Slider CSS & JS
+page.includeCSS {
+  site_package_slider = EXT:site_package/Resources/Public/Css/slider.css
+}
+
+page.includeJSFooter {
+  site_package_slider = EXT:site_package/Resources/Public/JavaScript/slider.js
+  site_package_slider.external = 0
+}
+
+# Base container configuration template
+lib.containerBase = FLUIDTEMPLATE
+lib.containerBase {
+    templateRootPaths {
+        0 = EXT:container_elements/Resources/Private/Templates/
+        1 = EXT:site_package/Resources/Private/Templates/Container/
+    }
+    partialRootPaths {
+        0 = EXT:container_elements/Resources/Private/Partials/
+        1 = EXT:site_package/Resources/Private/Partials/Container/
+    }
+    layoutRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
+        1 = EXT:container_elements/Resources/Private/Layouts/
+        2 = EXT:site_package/Resources/Private/Layouts/Container/
+    }
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        20 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+#Horizontal Slider Scroll; 
+# Base container configuration template
+lib.containerBase = FLUIDTEMPLATE
+lib.containerBase {
+    templateRootPaths {
+        0 = EXT:container_elements/Resources/Private/Templates/
+        1 = EXT:site_package/Resources/Private/Templates/Container/
+    }
+    partialRootPaths {
+        0 = EXT:container_elements/Resources/Private/Partials/
+        1 = EXT:site_package/Resources/Private/Partials/Container/
+    }
+    layoutRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
+        1 = EXT:container_elements/Resources/Private/Layouts/
+        2 = EXT:site_package/Resources/Private/Layouts/Container/
+    }
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        20 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+# ==============================================
+# SLIDER SCROLL HORIZONTAL CONTAINER
+# ==============================================
+tt_content.slider_scroll_horizontal =< lib.contentElement
+tt_content.slider_scroll_horizontal < lib.containerBase
+tt_content.slider_scroll_horizontal {
+    templateName = SliderScrollHorizontal
+}
+
+dataProcessing {
+  10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+  10 {
+    references.fieldName = image
+    as = images
+  }
+}
+
+//page container with background
+tt_content.page_container_background_image =< lib.contentElement
+tt_content.page_container_background_image {
+    templateName = PageContainerWithBackgroundImage
+    templateRootPaths {
+        0 = EXT:container_elements/Resources/Private/Templates/
+        1 = EXT:site_package/Resources/Private/Templates/Container/
+    }
+    partialRootPaths {
+        0 = EXT:container_elements/Resources/Private/Partials/
+        1 = EXT:site_package/Resources/Private/Partials/Container/
+    }
+    layoutRootPaths {
+        0 = EXT:container_elements/Resources/Private/Layouts/
+        1 = EXT:site_package/Resources/Private/Layouts/Container/
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        20 {
+            references.fieldName = background_image
+            as = backgroundImage
+        }
+    }
+}

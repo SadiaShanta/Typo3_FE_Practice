@@ -1,0 +1,23 @@
+// mod.wizards.newContentElement.wizardItems.containers {
+//     elements.heroSlider {
+//         iconIdentifier = content-image
+//         title = Hero ScrollTrigger Slider
+//         description = Horizontal scroll-based hero section slider
+//         tt_content_defValues {
+//             CType = container
+//             tx_container_parent = heroSlider
+//         }
+//     }
+//     show := addToList(heroSlider)
+// }
+mod.wizards.newContentElement.wizardItems.special {
+  elements.heroSlider {
+    iconIdentifier = content-image
+    title = LLL:EXT:site_package/Resources/Private/Language/locallang_db.xlf:heroSlider.title
+    description = LLL:EXT:site_package/Resources/Private/Language/locallang_db.xlf:heroSlider.description
+    tt_content_defValues {
+      CType = heroSlider
+    }
+  }
+  show := addToList(heroSlider)
+}

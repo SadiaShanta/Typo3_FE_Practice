@@ -1,0 +1,83 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="site-footer">
+
+    <!-- TOP -->
+    <div class="footer-main">
+        <div class="footer-grid">
+
+            <!-- LEFT -->
+            <div class="footer-col footer-left">
+                <span class="footer-label">PHONE</span>
+                <span class="footer-value">1-800-123-4567</span>
+            </div>
+
+            <!-- CENTER -->
+            <div class="footer-col footer-center">
+                <div class="footer-brand"> <img src="/fileadmin/user_upload/Echoes/echoesLogo.png" alt="Facebook"></div>
+
+                <div class="footer-social">
+
+                    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="/fileadmin/user_upload/Echoes/facebook.png" alt="Facebook">
+                    </a>
+                
+                    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="/fileadmin/user_upload/Echoes/Xicon.png" alt="X">
+                    </a>
+                
+                    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="/fileadmin/user_upload/Echoes/Instagram.png" alt="Instagram">
+                    </a>
+                
+                    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="/fileadmin/user_upload/Echoes/youtube.png" alt="YouTube">
+                    </a>
+                
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="footer-col footer-right">
+                <span class="footer-label">EMAIL</span>
+                <a href="mailto:info@site.com" class="footer-value">
+                    info@site.com
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            <div class="footer-bottom-left">
+                <div class="footer-copy">
+                    © {now -> f:format.date(format:'Y')} Echoes. All rights reserved.
+                </div>
+            </div>
+            <!-- <div class="footer-bottom-right">
+                <nav class="footer-links">
+                    <a href="#">Politica de confidențialitate</a>
+                    <a href="#">Termeni și condiții</a>
+                    <a href="#">Setări cookies</a>
+                </nav>
+            </div>   -->
+            <div class="footer-bottom-right">
+            <nav class="footer-links">
+                <f:if condition="{footernavigation}">
+                    <f:for each="{footernavigation}" as="item">
+                        <a href="{item.link}" target="{item.target}">
+                            {item.title}
+                        </a>
+                    </f:for>
+                </f:if>
+            </nav>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</html>

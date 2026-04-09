@@ -1,0 +1,273 @@
+#page-header{
+    .full-text { display: inline; }
+    .mobile-text { display: none; }
+    // position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;   /* keeps it above other content */
+    background: linear-gradient(
+        180deg,
+        #020611 0%,
+    ) !important;
+
+    .navbar-brand-logo-normal{
+        max-width: 14rem; 
+        height: auto;      
+        width: 100%;  
+    }
+    .navbar-nav{
+        margin-left: 0 !important;
+        width: 100%;
+        justify-content: center;   /* <-- centers menu items */
+        text-align: center;
+    }
+/* Default menu text color */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link-text {
+    color: #6c757d !important; /* ash/grey */
+}
+
+/* Hover & Focus */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link-text:hover,
+.navbar-nav .nav-link-text:focus {
+    color: #7396F7 !important;
+}
+
+/* Active (current page) */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link-text.active,
+.navbar-nav .nav-item.active > .nav-link {
+    color: #7396F7 !important; /* optional: same as hover */
+}
+
+/* If there is a ::before underline/bar */
+.navbar-nav .nav-link::before {
+    background-color: #7396F7 !important;
+}
+.linkedin {
+    color: #0956ff;
+    font-size: 1.5rem;
+}
+
+#header-contact {
+
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 18px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;  
+    gap: 8px;
+    backdrop-filter: blur(4px);
+    transition: all 0.25s ease;
+}
+
+#header-contact::after {
+    content: "↗";
+    font-size: 12px;
+    opacity: 0.8;
+    margin-left: 2px;
+}
+
+#header-contact:hover {
+    border-color: #0956ff;
+    color: #0956ff;
+}
+}
+
+/* ----------------------------------------- */
+/* RESPONSIVE HEADER FIX                     */
+/* ----------------------------------------- */
+
+
+
+@media (max-width: 991px) {
+    /* Allow wrapping on tablet/mobile */
+    #page-header .container-mainnavigation {
+        margin-left: 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    /* Logo */
+    #page-header .navbar-brand-logo-normal {
+        max-width: 10rem;
+    }
+
+    /* Navigation takes full width when collapsed */
+    #mainnavigation.navbar-collapse {
+        width: 100%;
+        order: 10;
+        margin-top: 5px;
+    }
+
+    /* Menu items stack vertically */
+    #mainnavigation .navbar-nav {
+        margin-left: 0 !important;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    /* LinkedIn + Contact button go below menu */
+    #page-header .linkedin,
+    #page-header #header-contact {
+        order: 11;
+        margin-left: 0 !important;
+        margin: 1px auto 0 auto; 
+    }
+
+    // #header-contact {
+    //     width:37%
+    // }
+}
+
+@media (max-width: 576px) {
+    .full-text { display: none !important; }
+    .mobile-text { display: inline !important; }
+    /* Smaller logo on small phones */
+    #page-header .navbar-brand-logo-normal {
+        max-width: 8rem;
+    }
+        /* Allow wrapping on tablet/mobile */
+    #page-header .container-mainnavigation {
+        display: flex;
+        // flex-wrap: nowrap;       /* prevent second line */
+        gap: 1px;
+        margin: 0;
+    }
+
+}
+/* make hamburger icon white */
+.navbar-toggler {
+    border-radius: 50% !important;
+    border:2px !important;
+    background-color: #27272F!important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#B4C6F9' stroke-linecap='round' stroke-miterlimit='9' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")!important;
+    
+}
+.navbar-toggler-icon,
+.navbar-toggler-icon:before,
+.navbar-toggler-icon:after {
+    background-color:#B4C6F9 !important;
+    width: 15px !important;
+}
+//mobile version
+@media (max-width: 991px) {
+    #mainnavigation{
+        background: linear-gradient(
+            180deg,
+            #020611 0%,
+            #071228 60%,
+            #0b1c3a 80%,
+            #001a34 90%,
+            #010105 100%
+        ) !important;
+        padding: 20px 40px !important;
+    }
+    #page-header{
+        padding: 20px 30px !important;
+    }
+
+    /* put hamburger first */
+    #page-header .navbar-toggler {
+        order: 1;
+        margin-left: 0 !important;
+    }
+
+    /* logo second */
+    #page-header .navbar-brand {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    /* Let's Talk button third */
+    #page-header #header-contact {
+        order: 3;
+    }
+
+    
+    ///* Center navbar items */
+.navbar-nav {
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+}
+
+/* Ensure each item doesn't stretch */
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+/* Default link color */
+.navbar-nav .nav-link {
+    color: #ffffff; /* or whatever default you want */
+    transition: color 0.3s ease;
+}
+
+/* Hover color */
+.navbar-nav .nav-link:hover {
+    color: #7396F7; /* purple */
+}
+
+/* Active / selected link */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="true"] {
+    color: #7396F7; /* same purple */
+}
+
+
+//underline or indicator on hover (
+
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+/* underline */
+.navbar-nav .nav-link-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #7396F7;
+    transition: width 0.3s ease;
+}
+
+/* hover + active underline */
+.navbar-nav .nav-link:hover .nav-link-text::after,
+.navbar-nav .nav-link.active .nav-link-text::after,
+.navbar-nav .nav-link[aria-current="true"] .nav-link-text::after {
+    width: 30%;
+}
+
+
+}
+
+#page-header {
+    height: 78px;                
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+
+

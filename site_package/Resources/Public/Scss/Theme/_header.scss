@@ -1,0 +1,251 @@
+.btn-gold {
+    background-color: #b5872b;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background-color: darken(#b5872b, 10%);
+    }
+}
+.cta-button {
+    background-color: #b5872b; /* golden color */
+    color: #fff;
+    font-family: 'Ballega', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: darken(#b5872b, 10%);
+    transform: translateY(-1px);
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-icon {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 9px;
+    width: 30px;
+}
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #5a5a5a; /* dark gray like your image */
+    transition: all 0.3s ease;
+}
+
+.menu-text {
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #5a5a5a;
+    text-transform: uppercase;
+}
+.menu-toggle:hover .menu-icon span {
+    background-color: #000; /* slightly darker on hover */
+}
+.menu-toggle:hover .menu-text {
+    color: #000;
+}
+.menu-toggle[aria-expanded="true"] .menu-icon span:first-child {
+    transform: rotate(45deg) translate(2px, 2px);
+}
+.menu-toggle[aria-expanded="true"] .menu-icon span:last-child {
+    transform: rotate(-45deg) translate(2px, -2px);
+}
+
+.slider-item {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-content {
+  max-width: 1200px;
+  padding: 2rem;
+  color: white;
+  text-align: left;
+}
+
+.text-block h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.text-block h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.text-block p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  max-width: 600px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #f4b400;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+}
+
+
+/* MAIN MENU WRAPPER */
+#mainnavigation.collapse.show {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 20%;              // adjust (50–60%) depending on your design
+  height: auto;
+  background: #ffffff;
+  padding: 80px 40px; 
+  overflow-y: auto;
+  z-index: 9000;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+  /* Prevent page behind from scrolling */
+  body.menu-open & {
+    overflow: hidden;
+  }
+}
+
+/* CLOSE BUTTON + "MENU" text row */
+#page-header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+
+  .navbar-toggler {
+    border: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+/* NAVIGATION LIST */
+#mainnavigation ul.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 24px;      // space between menu items
+
+    a.nav-link {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+/* CONTACT & SOCIAL SECTION */
+.menu-bottom-section {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+
+  h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .contact-lines {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+  }
+
+  .location {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+  }
+
+  /* SOCIAL ICONS */
+  .social-icons {
+    display: flex;
+    gap: 14px;
+
+    a {
+      width: 42px;
+      height: 42px;
+      background: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+
+      i {
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* Disable Bootstrap’s default collapse animation */
+#mainnavigation.collapsing {
+  height: 100vh !important;
+  transition: none !important;
+}
+
+

@@ -1,0 +1,42 @@
+@import './PageTsConfig/BackendLayouts/'
+@import './PageTsConfig/FrameOptions.tsconfig'
+
+RTE {
+    default {
+        preset = echoes_package
+    }
+}
+
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+               frame_class {
+            addItems {
+                hero-section = Hero Section
+                second-page-section = Second Page Section
+                pilonii-section = Pilonii Section
+                artists-section = Artists Section 
+                etape-section = Etape Section
+                blog-section = Blog Section
+                mail-section = Mail Section
+                intrebari-section = Intrebari Section
+                participi-section = Participi Section
+                conectare-section = conectare Section
+ 
+            }
+        }
+        frame_layout {
+            addItems {
+                layout1 = Layout 1
+            }
+        }
+
+    }
+}
+
+TCEMAIN {
+
+}
+

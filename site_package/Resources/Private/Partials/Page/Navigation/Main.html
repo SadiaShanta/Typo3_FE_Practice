@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}</f:variable>
+<f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
+<f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}</f:variable>
+
+<header id="page-header" class="{headerClass}">
+    <div class="container container-mainnavigation d-flex align-items-center justify-content-between">
+
+        <!-- Left: Toggle + Menu Text -->
+        <div class="header-left d-flex align-items-center">
+            <f:render partial="Header/Toggle" arguments="{_all}" />
+        </div>
+
+        <!-- Center: Logo -->
+        <div class="header-center text-center">
+            <f:render partial="Header/Logo" arguments="{_all}" />
+        </div>
+
+        <!-- Right: CTA Button -->
+        <div class="header-right">
+            <f:cObject typoscriptObjectPath="lib.startConversationsLink" />      
+        </div>
+
+    </div>
+</header>
+
+<!-- navigation list is inside a bootstrap collapse container.  -->
+<!-- This file controls the first-level navigation (main pages + their dropdowns). -->
+<div id="mainnavigation" class="collapse">
+    <nav class="main-nav-wrapper">
+        <f:render partial="Navigation/MainNavigation" arguments="{_all}" />
+    </nav>
+</div>
+
+</html>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

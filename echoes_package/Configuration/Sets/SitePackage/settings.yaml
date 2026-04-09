@@ -1,0 +1,29 @@
+plugin:
+  bootstrap_package:
+    settings:
+      scss:
+        primary: '#eb3e4a'
+        secondary: '#013859'
+    view:
+      layoutRootPath: 'EXT:echoes_package/Resources/Private/Layouts/'
+      partialRootPath: 'EXT:echoes_package/Resources/Private/Partials/'
+      templateRootPath: 'EXT:echoes_package/Resources/Private/Templates/'
+  bootstrap_package_contentelements:
+    view:
+      layoutRootPath: 'EXT:echoes_package/Resources/Private/Layouts/ContentElements/'
+      partialRootPath: 'EXT:echoes_package/Resources/Private/Partials/ContentElements/'
+      templateRootPath: 'EXT:echoes_package/Resources/Private/Templates/ContentElements/'
+page:
+  logo:
+    file: 'EXT:echoes_package/Resources/Public/Images/logo.svg'
+    fileInverted: 'EXT:echoes_package/Resources/Public/Images/logo-inverted.svg'
+    width: 192
+    alt: 'My Site Package'
+    linktitle: 'My Site Package'
+  favicon:
+    file: 'EXT:echoes_package/Resources/Public/Icons/favicon.ico'
+  fluidtemplate:
+    layoutRootPath: 'EXT:echoes_package/Resources/Private/Layouts/Page/'
+    partialRootPath: 'EXT:echoes_package/Resources/Private/Partials/Page/'
+    templateRootPath: 'EXT:echoes_package/Resources/Private/Templates/Page/'
+

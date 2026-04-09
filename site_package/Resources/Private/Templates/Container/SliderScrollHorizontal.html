@@ -1,0 +1,114 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+    {f:variable(name: '_config', value: data.pi_flexform)}
+    <div id="c2" class="process-wrap">
+        <f:if condition="{children_101}">
+                <div class="process">
+                    <f:render section="ElementsList" arguments="{_children: children_101}" />
+                </div>
+        </f:if>
+    </div>
+
+<f:comment><!-- Device detection script - runs first using inline script --></f:comment>
+<script>
+(function() {
+  function isMobileDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const isMobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+    const isSmallScreen = window.matchMedia("(max-width: 968px)").matches;
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    
+    return isMobileUA || (isSmallScreen && isTouchDevice);
+  }
+  
+  // Set flag for GSAP initialization
+  if (!isMobileDevice()) {
+    window.loadGSAPForSlider = true;
+    console.log('Device: Desktop - GSAP will be loaded');
+  } else {
+    window.loadGSAPForSlider = false;
+    console.log('Device: Mobile - GSAP disabled');
+    // Add mobile class to html element for CSS styling
+    document.documentElement.classList.add('mobile-device');
+    
+    // Fix horizontal scroll on mobile
+    document.addEventListener('DOMContentLoaded', function() {
+      const processWrap = document.querySelector('.process-wrap');
+      const process = document.querySelector('.process');
+      const processItems = document.querySelectorAll('.process__item');
+      
+      if (processWrap) {
+        processWrap.style.overflow = 'visible';
+        processWrap.style.height = 'auto';
+        processWrap.style.width = '100%';
+        processWrap.style.maxWidth = '100vw';
+      }
+      
+      if (process) {
+        process.style.display = 'block';
+        process.style.width = '100%';
+        process.style.maxWidth = '100%';
+        process.style.transform = 'none';
+        process.style.minWidth = 'auto';
+      }
+      
+      // Fix all child items
+      processItems.forEach(function(item) {
+        item.style.width = '100%';
+        item.style.maxWidth = '100%';
+        item.style.minWidth = 'auto';
+      });
+      
+      console.log('Mobile layout applied - overflow fixed');
+    });
+  }
+})();
+</script>
+
+
+<f:comment><!-- Load GSAP scripts --></f:comment>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
+
+<f:comment><!-- Initialize GSAP only on desktop --></f:comment>
+<v:asset.script name="gsap-horizontal-scroll-initialize">          
+document.addEventListener("DOMContentLoaded", function() {
+  // Check if GSAP should be initialized (only on desktop)
+  if (window.loadGSAPForSlider && typeof gsap !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const process = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".process-wrap",
+        end: "+=2000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1
+      }
+    });
+
+    process.to(".process", { xPercent: -75, ease: "none" });
+    
+    console.log('GSAP Scroll Animation INITIALIZED (Desktop mode)');
+  } else {
+    console.log('GSAP Scroll Animation DISABLED (Mobile mode)');
+    console.log('   - User can scroll normally');
+    console.log('   - CSS classes are preserved for styling');
+  }
+});
+</v:asset.script>
+
+</f:section>
+
+<f:section name="ElementsList">
+    
+      <f:for each="{_children}" as="_record" iteration="iteration">
+        <div class="process__item">
+            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+        </div>
+        </f:for>
+</f:section>
+
+</html>
+

@@ -1,0 +1,166 @@
+
+$primary-green: #98B527;
+$dark-text: #122A08;
+$bg-cream: #F9F9F2;
+$font-Inter: 'Inter 18pt', sans-serif; 
+$font-Fraunces: 'Fraunces', serif; 
+.frame.frame-second-page-section{
+    background-color: $bg-cream;
+    .row {
+        display: flex;
+        align-items: center; // Vertical centering
+     
+        padding: 2px 40px;
+        gap: 40px;
+          
+          // Image Column (Left)
+          .second-page-left {
+            .gallery-item {
+              position: relative;
+              border-radius: 12px;
+              overflow: hidden;
+              line-height: 0;
+      
+              img, picture {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 12px;
+              }
+      
+              // Play Button Overlay
+              &::after {
+                content: '▶'; 
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60px;
+                height: 60px;
+                background: rgba(26, 10, 36, 0.9);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                font-size: 20px;
+              }
+            }
+          }
+      
+          // Text Column (Right)
+          .second-page-right{
+          .frame.frame-type-text {
+            padding-left: 20px;
+      
+            h1 {
+              // font-family: $font-Fraunces;
+              font-size: 72px;
+              color: rgba($dark-text, 0.8);
+              margin-bottom: 24px;
+              font-weight: 600;
+            }
+      
+            p {
+              // font-family: $font-Inter;
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 32px;
+              color: rgba($dark-text, 0.8);
+              max-width: 466px;
+              margin-bottom: 32px;
+              margin-left: 70px;
+            }
+      
+            // Button Styling
+             p {
+              display: flex;
+              gap: 15px;
+              flex-wrap: wrap;
+      
+              a {
+                text-decoration: none;
+                padding: 12px 32px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: all 0.3s ease;
+                display: inline-block;
+              }
+            }
+          }
+          }
+      }
+      
+
+}
+// Mobile Version (Targeting screens below 768px)
+@media (max-width: 767px) {
+  .frame.frame-second-page-section {
+    padding: 10px 20px; // Standard mobile padding
+
+    .row {
+      flex-direction: column; // Stack elements vertically
+      text-align: center;      // Center text for mobile aesthetics
+      gap: 10px;
+      padding: 0;
+
+      // Move text section to the top
+      .second-page-right {
+        order: 1; 
+
+        .frame.frame-type-text {
+          padding-left: 0; // Remove desktop offset
+
+          h1 {
+            font-size: 32px; // Scale down for mobile screens
+            margin-bottom: 16px;
+            line-height: 1.2;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-left: 0;      // Remove the 70px desktop margin
+            max-width: 100%;     // Allow text to fill width
+            margin-bottom: 24px;
+            justify-content: center; // Center the buttons
+
+
+            a {
+              flex: 1;          // Make buttons equal width
+              max-width: 150px; // Prevent them from becoming too wide
+              padding: 8px 4px !important;
+              font-size: 13px;
+              text-align: center;
+            }
+          
+          }
+        }
+      }
+
+      // Move image section to the bottom
+      .second-page-left {
+        order: 2;
+        width: 100%;
+
+        .gallery-item {
+          border-radius: 16px; // Slightly softer corners for mobile
+
+          img, picture {
+            border-radius: 16px;
+          }
+
+          // Scale the play button for smaller screens
+          &::after {
+            width: 50px;
+            height: 50px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

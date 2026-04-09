@@ -1,0 +1,91 @@
+// Variables for easy adjustments
+$primary-text: #122A08; // Dark green from the design
+$bg-color: #e2edd6;    // Pale green background
+$font-family-Fraunces: 'Fraunces', serif; // Replace with actual serif font if known
+$font-family-Inter: 'Inter 18pt', sans-serif;
+
+.frame.frame-hero-section {
+    position: relative;
+    overflow: hidden;
+    //background-color: #edf2ea ; // fallback color
+    //background-image: url('/fileadmin/user_upload/Echoes/coil_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  .row {
+    position: relative; // Keeps content above the ::before pseudo-element
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1px;
+  }
+
+  // Left Column (Text Content)
+  .hero-left {
+    flex: 1;
+    
+
+    h1 {
+      color: $primary-text;
+      font-family: $font-family-Fraunces;
+      font-size: 72px;
+      line-height: 80px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      color: #000;
+      font-family: $font-family-Inter;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 32px;
+      max-width: 556px;
+      opacity: 0.9;
+    }
+  }
+
+  // Right Column (Image Content)
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .gallery-item {
+      figure {
+        margin: 0;
+        
+        picture img, img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          border-radius: 16px; 
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustment for mobile
+@media (max-width: 768px) {
+  .frame.frame-hero-section {
+    .row {
+      flex-direction: column;
+      text-align: center;
+      padding: 1px 20px;
+      h1 {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+}

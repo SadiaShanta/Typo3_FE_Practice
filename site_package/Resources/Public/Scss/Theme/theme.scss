@@ -1,0 +1,644 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+@import 'header';
+
+@import 'footer';
+@import 'heroVideo';
+
+@import 'sliderScrollHorizontal';
+@import 'pageContainerWithBackground';
+@import 'slickSlider';
+
+@import 'fonts';
+
+
+//We bring the pieces together.page 
+
+#c32 h3 span {
+    font-family: "Lexend", sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-size: 22px !important;
+    text-transform: uppercase !important;
+    line-height: 20px !important;
+    letter-spacing: 0 !important;
+    color: #14171F !important;
+}
+#c32 p {
+    font-family: "Lexend", sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    letter-spacing: 0 !important;
+    color: #333 !important; 
+    margin-bottom: 12px !important;
+}
+/* Remove ALL padding/margin inside column 1 */
+#c32 .ce-col > .frame {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Remove bottom margin of the image CE specifically */
+#c34 {
+    margin-bottom: 8px !important; /* or 0px if you want it fully tight */
+}
+
+/* Remove inner spacing from TYPO3 ce structure */
+#c34 .ce-inner,
+#c34 .ce-outer,
+#c34 .ce-row,
+#c37 .ce-inner,
+#c37 .ce-outer,
+#c37 .ce-row {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.bring_pieces_together_col1,
+.bring_pieces_together_col2,
+.bring_pieces_together_col3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+}
+#c30 #c31{
+    margin-bottom: 0 !important;
+}
+#c43 {
+  width: 100%;
+  min-height: 100vh; // will cover full visible screen height
+  height: auto;      // optional, prevents fixed height issue
+
+  .ce-container .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; // if you want vertical alignment
+    gap: 20px; // optional
+ }
+}
+//For background image page 
+  #c47 {
+    margin-top: 100px;
+    h3 {
+      font-family: "Funnel Display", sans-serif;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 50px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      color: white;
+  
+      // Styling the span inside h3 (same typography)
+      span,
+      span strong {
+        font-family: "Funnel Display", sans-serif;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 50px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        color: #829cf3;
+        
+      }
+  
+      strong {
+        font-family: "Funnel Display", sans-serif;
+        font-weight: 700;
+      }
+    }
+  
+    p.lead {
+      font-family: "Funnel Display", sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+      letter-spacing: 0;
+      color:white;
+    }
+  }
+  .people , .places, .platforms, .purpose {
+    width: 313px;
+    height: 280px;
+    background: #ffffff;
+    border-radius: 8px;
+    opacity: 1;
+    margin: 20px;  
+  
+    // Optional shadow if needed
+    // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  
+    padding: 0px;  // adjust to your design spacing
+    text-align: left;
+    > .frame-type-image {
+      // Ensure the icon is aligned to the left and has space below it
+      text-align: left;
+ // Space between the icon and the heading/text
+      margin-left: 12px;
+      // This makes sure the icon takes up only the space it needs
+      display: inline-block; 
+  }
+    img {
+      width: 48px;       // adjust if needed
+      height: auto;
+      margin-bottom: 0px;
+      display: block;  
+    }
+  
+    h4 {
+      font-family: "Lexend", sans-serif;
+      font-weight: 600;        // SemiBold
+      font-size: 22px;
+      line-height: 20px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #000;
+      margin:12px;  
+    }
+  
+    p {
+      font-family: "Lexend", sans-serif;
+      font-weight: 400;        // Regular
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: #545252;  
+      margin:12px;           // adjust to match design
+    }
+  }
+  .people , .places{
+    margin-top: 90px;
+  }
+  // .people_places{
+  //   display: flex;
+  // }
+
+
+#c54, #c56, #c57, #c58{
+  padding: 0px;
+}
+
+//For next page: A clear path from vision to reality.
+// #c59 {
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+
+//   // Target the inner grid/flex container
+//   .ce-container {
+//       // Ensure the row takes up space and alignment is correct
+//       .row.flex {
+//           align-items: flex-start; // Align items to the top
+//       }
+//   }
+// }
+  // --- LEFT COLUMN: TITLE (ID: c61) ---
+  #c61,
+  #c64,
+  #c71{
+      // Add some margin at the bottom for mobile when columns stack
+      margin-bottom: 10px; 
+      
+      @media (min-width: 768px) {
+          // Adjust margin for desktop/tablet layout
+          margin-bottom: 0;
+          // The 78px left offset from Figma can be approximated with left padding/margin
+          // or simply using the default column spacing, but we can add some extra left space:
+          padding-left: 15px; // Default bootstrap gutter
+      }
+
+      // Apply Figma Typography rules to the <h2>
+      h2 {
+          font-family: "Lexend", sans-serif;
+          font-weight: 700; // Bold
+          line-height: 1; // 44px on 44px size, so line-height: 1
+          text-transform: uppercase;
+          color:#2E3E75;
+          ;
+          // Default size for desktop/tablet (44px)
+          font-size: 44px;
+          span{
+            color:#8b8a8a!important;
+          }
+          // Responsive adjustment for smaller screens
+          @media (max-width: 767px) {
+              font-size: 32px;
+          }
+      }
+  }
+//A clear path from vision to reality 
+
+  // --- RIGHT COLUMN: CONTENT (ID: c62) ---
+  #c62,
+  #c67,
+  #c71,
+  #c90{
+      // Style for the primary content (H4 and P)
+      
+      h4 {
+          font-family: "Lexend", sans-serif;
+          font-weight: 400; // Semi-bold for headings
+          font-size: 22px;
+          line-height: 1.4;
+          color: #14171F;
+          margin-bottom: 10px / 2;
+      }
+
+      p {
+          font-family: "Lexend", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.6;
+          color: #7b786d;
+          margin-bottom: 1em;
+      }
+  }
+
+#c73{
+  
+  background-color: #172249;
+
+  .no-transformation{
+    color:#ffffff;
+
+    #c75{
+      h2 {
+        font-family: "Lexend", sans-serif;
+        font-weight: 700; // Bold
+        line-height: 1; // 44px on 44px size, so line-height: 1
+        text-transform: uppercase;
+        color:white;
+        ;
+        // Default size for desktop/tablet (44px)
+        font-size: 44px;
+        span{
+          color: #9EA3B5!important;
+        }
+        // Responsive adjustment for smaller screens
+        @media (max-width: 767px) {
+            font-size: 32px;
+        }
+      }
+    }
+
+    #c76{
+      padding: 0px 0 !important;
+      h4 {
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;        // SemiBold
+        font-size: 22px;
+        line-height: 20px;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        color: white;
+        margin:12px;  
+      }
+    
+      p {
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;        // Regular
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0;
+        color: #e8e8e8;  
+        margin:12px;           // adjust to match design
+      }
+    }
+  }
+  #c77{
+    color:#ffffff;
+    padding: 0px 0 !important;
+    h4{
+      font-family: "Lexend", sans-serif;
+      font-weight: 600;        // SemiBold
+      font-size: 22px;
+      line-height: 27px;
+
+
+    }
+  }
+
+  .our-partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    padding: 0px 0;
+  
+    .ce-col {
+      background: #ffffff;
+      border-radius: 12px;
+      width: calc(25% - 18px); // 4 columns
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 260px;
+  
+      // Logo container
+      .frame-type-image {
+        margin-bottom: 4px;
+        height: 140px; 
+        border-bottom: 0.2px solid rgb(207, 207, 207);
+        padding: 20px 0 !important;
+        img {
+          max-height: 80px; 
+          object-fit: contain; 
+          width: auto;
+          display: block;
+        }
+      }
+  
+      // Title
+      .frame-type-text h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 8px;
+        padding: 2px 20px;
+      }
+  
+      // Description
+      .frame-type-text p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #4a4a4a;
+        margin: 0;
+        padding: 0px 20px;
+        bottom: 0%;
+      }
+    }
+  
+    // Responsive
+    @media (max-width: 1200px) {
+      .ce-col {
+        width: calc(33.33% - 16px);
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .ce-col {
+        width: calc(50% - 12px);
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .ce-col {
+        width: 100%;
+      }
+    }
+  }
+
+  
+  
+}
+#c90{
+  padding-left: 20px;
+  .powermail_fieldset_2 {
+    display: block !important;
+    
+  }
+  
+  h2 {
+    span.text-primary{
+      color:#9EA3B5!important;
+    }
+    span{
+      font-family: "Lexend", sans-serif;
+      font-weight: 700; // Bold
+      line-height: 1; // 44px on 44px size, so line-height: 1
+      text-transform: uppercase;
+      color:#2E3E75;
+      ;
+      // Default size for desktop/tablet (44px)
+      font-size: 44px;
+  
+      // Responsive adjustment for smaller screens
+      @media (max-width: 767px) {
+          font-size: 32px;
+      }
+  }
+  }
+}
+$primary-text-color: #333; // Dark text color for labels and form title
+$secondary-text-color: #6c757d; // Lighter text color (e.g., for general text)
+$background-color: #f7f3ed; // The light, slightly beige background color
+$input-border-color: #ccc; // Light border for visual separation
+$button-background-color: #a08138; // The golden-brown button color
+$button-text-color: #fff;
+.container-fluid.tx-powermail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Set a max width for the form container if desired
+    // max-width: 400px;
+    // margin: 50px auto;
+    padding: 30px;
+    background-color: #fff; // Form itself can have a white background if it's separate from the page background
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); // Subtle shadow
+}
+
+// --- Form Header/Title ---
+.powermail_form {
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #808080;
+    padding-left: 0 !important;
+  }
+}
+// --- Logo/Icon Styling (The Orange 'V' Icon) ---
+// This requires a div/span element to wrap the icon image
+// and position it absolutely or relatively to the 'FULL NAME' field.
+.powermail_fieldwrap.powermail_type_input.powermail_fieldwrap_fullname {
+    position: relative; // Establish context for absolute positioning
+}
+
+// The image itself isn't in the HTML, so we'll simulate it with a pseudo-element
+// assuming the logo is meant to be floating near the top fields.
+.powermail_fieldwrap.powermail_type_input.powermail_fieldwrap_fullname::before {
+    content: '';
+    display: block;
+    width: 50px; // Size of the icon
+    height: 50px;
+    background-image: url('path/to/your/v_icon.png'); // **Replace with the actual path to your logo image**
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #B1862D !important; // The background color of the icon circle
+    border-radius: 50%;
+    position: absolute;
+    top: -15px; // Adjust vertical position
+    right: 0; // Adjust horizontal position
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Shadow for the floating effect
+}
+
+// --- Field Styling (Labels and Inputs) ---
+.powermail_fieldwrap {
+    margin-bottom: 0.5rem; // Spacing between each field group
+    // The fields seem to be full width in this layout
+    .col-md-6 {
+        padding: 0; // Remove default grid padding if any
+    }
+
+    .powermail_field {
+        position: relative;
+
+        .btn .btn-primary{
+          background-color:#B1862D !important;
+        }
+    }
+
+    .form-label.powermail_label {
+        display: block; // Ensure label takes full width
+        text-transform: uppercase; // All caps for the label text
+        font-size: 14px;
+        font-weight: 600; // Semi-bold for emphasis
+        color: $primary-text-color;
+        margin-bottom: 0.1rem; // Small space below the label
+        letter-spacing: 0.5px;
+    }
+
+    .form-control {
+        border: none; // Remove default border
+        border-bottom: 1px solid $input-border-color; // Only bottom border
+        border-radius: 0; // Remove border radius
+        padding: 0.2rem 0; // Padding for the text, especially top/bottom
+        height: auto; // Let padding/font size control the height
+        background-color: transparent; // No background
+        font-size: 1rem;
+        line-height: 1.5;
+        box-shadow: none; // Remove default focus/active box shadow
+
+        &:focus {
+            border-color: $primary-text-color; // Darker border on focus
+            box-shadow: none;
+            outline: none;
+        }
+
+        &[required] {
+            // Placeholder/style for the required asterisk, if using HTML *
+            // The image shows the asterisk visually next to the label, 
+            // which is handled by the span.mandatory in the HTML.
+            + span.mandatory {
+                color: $primary-text-color;
+            }
+        }
+    }
+
+    // Adjusting input/select elements to match the line-style
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    // Styling the dropdown arrow for SELECT SOLUTION
+    select.powermail_select_control {
+        -webkit-appearance: none; // Remove default styling on webkit
+        -moz-appearance: none; // Remove default styling on firefox
+        appearance: none; // Remove default styling
+        // Custom background icon for the dropdown arrow (V shape)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.5rem center;
+        background-size: 0.75rem 0.75rem;
+    }
+}
+
+// --- Submit Button Styling ---
+.powermail_form_form_1 {
+    // We need to target the element that wraps the button and its text.
+    // Assuming the "Start the Conversation" button is a submit input or a styled anchor.
+    // The HTML snippet doesn't show the button, so we'll assume a class for it.
+    .btn-submit-wrapper {
+        margin-top: 0.1rem;
+    }
+
+    // General button styling
+    button,
+    input[type="submit"],
+    .submit-button { // Assuming 'submit-button' is the class for the final element
+      position: relative;   // allow pseudo-element positioning
+      width: 100%;
+      height: 52px;
+      background: #b5862c;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 0 20px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      align-items: center;
+
+        &:hover {
+            background-color: darken($button-background-color, 10%);
+        }
+
+        // Arrow icon on the right
+        &::after {
+          content: "\2192"; /* arrow → */
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 34px;
+          height: 34px;
+          background: #ffffff;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18px;
+          font-weight: bold;
+          color: #b5862c;
+      }
+    }
+}
+
+.powermail_legend{
+  display: none;
+}
+
+
+.powermail_form input.btn.btn-primary[type="submit"] {
+  background-color: #b4872b;
+  border-color:#b4872b;
+}
+/* Force all Powermail fields to be 100% width */
+.powermail_form .row {
+  display: block !important;
+}
+
+.powermail_form .col-md-6,
+.powermail_form .col-md-12,
+.powermail_form .col-sm-6 {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+  padding: 20px !important;
+}
+#powermail_field_selectsolution{
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+}
+.conversation-start{
+  background-color: #F1EEEA;
+}

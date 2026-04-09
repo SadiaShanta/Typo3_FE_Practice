@@ -1,0 +1,90 @@
+page {
+    includeCSS {
+        theme = EXT:matrix_site_package/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+        jquery = https://code.jquery.com/jquery-3.7.1.js
+        # jquery.disableCsrf = 1
+        # jquery.integrity = sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=
+        # jquery.crossorigin = anonymous
+        jquery.external = 1
+        jquery.forceToTop = 1
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        matrix_site_package_scripts = EXT:matrix_site_package/Resources/Public/JavaScript/main.js
+    }
+}
+lib.footerMenu1 = HMENU
+lib.footerMenu1 {
+    special = directory
+    # UID of the parent page for first column (e.g., “Main pages” folder)
+    special.value = 4
+    1 = TMENU
+    1 {
+        NO {
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.field = title
+            linkWrap = <li>|</li>
+        }
+    }
+}
+
+lib.pageTitle35 = RECORDS
+lib.pageTitle35 {
+    tables = pages
+    source = 35
+    conf.pages = TEXT
+    conf.pages.field = title
+  }
+//for footer
+lib.pageTitle30 = RECORDS
+lib.pageTitle30 {
+    tables = pages
+    source = 30
+    conf.pages = TEXT
+    conf.pages.field = title
+  }
+
+lib.pageTitle31 = RECORDS
+lib.pageTitle31 {
+    tables = pages
+    source = 31
+    conf.pages = TEXT
+    conf.pages.field = title
+  }
+lib.pageTitle32 = RECORDS
+lib.pageTitle32 {
+    tables = pages
+    source = 32
+    conf.pages = TEXT
+    conf.pages.field = title
+  }
+
+lib.pageTitle33 = RECORDS
+lib.pageTitle33 {
+    tables = pages
+    source = 33
+    conf.pages = TEXT
+    conf.pages.field = title
+  }
+lib.pageTitle34 = RECORDS
+lib.pageTitle34 {
+    tables = pages
+    source = 34
+    conf.pages = TEXT
+    conf.pages.field = title
+  }
+
+// page.includeCSS.explore = EXT:saudi_vision/Resources/Public/Css/explore.css
+
+// page.includeJSFooter.explore = EXT:saudi_vision/Resources/Public/JavaScript/explore.js

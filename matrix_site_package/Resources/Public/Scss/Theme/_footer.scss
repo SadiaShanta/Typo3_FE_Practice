@@ -1,0 +1,298 @@
+
+#page-footer{
+    margin-top: auto;
+
+    
+}
+.footer-menu-section-has-navigation{
+    background: #0f0f0f !important;
+    width: 100%;
+}
+.ahm-footer {
+    background: #0f0f0f;
+    color: #bfbfbf;
+    padding: 40px 60px;
+    font-family: "Euclid Circular A", sans-serif;
+
+    a { color: #bfbfbf; text-decoration: none; }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+        padding-top:40px;
+        border-top: 1px solid #222;
+    }
+
+    .footer-logo {
+        width: 170px;
+        margin-bottom: 20px;
+    }
+
+    .footer-left {
+        display: flex;
+        gap: 70px;
+        ul {
+            display: flex;
+            gap: 25px;
+
+            li { list-style: none; }
+
+            a {
+                color:white;
+                text-transform: capitalize;
+                font-size: 15px;
+                transition: 0.2s ease;
+            }
+
+            a:hover { color: #0956ff; 
+                text-decoration: underline;} 
+        }
+    }
+
+    .footer-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .linkedin {
+            font-size: 22px;
+            color: #0956ff;
+        }
+
+        .start-btn {
+            background: transparent;
+            border: 1px solid #444;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.2s ease;
+
+            i { margin-left: 8px; }
+        }
+
+        .start-btn:hover {
+            background: #222;
+        }
+    }
+
+    .footer-middle {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+        border-bottom: 1px solid #222;
+        font-size: 14px;
+        font-weight: 400;
+
+        .cities {
+            color: #888;
+        }
+
+        .dev {
+            font-weight: 500;
+            .vizgou {
+                border: 1px solid #555;
+                padding: 3px 10px;
+                border-radius: 4px;
+                margin-left: 5px;
+                display: inline-block;
+                color: #d8d8d8;
+                font-size: 11px;
+                font-weight: 600;
+        }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+
+        .back-to-top {
+            font-size: 14px;
+
+            i { margin-left: 6px; }
+        }
+    }
+}
+/* ===========================
+   MOBILE RESPONSIVE FOOTER
+=========================== */
+@media (max-width: 1124px) {
+    .ahm-footer {
+        padding: 30px;
+
+        .footer-top {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .footer-left {
+            flex-direction: column;
+            gap: 25px;
+            .footer-logo {
+                margin: 0 auto 15px auto;   /* 👈 center logo */
+                display: block;
+            }
+
+            ul {
+                // flex-direction: column;
+                // gap: 12px;
+                // align-items: center;
+                display: grid;                 /* 👈 change */
+                grid-template-columns: repeat(2, 1fr); /* 👈 2 columns */
+                gap: 12px 30px;                /* row / column gap */
+                max-width: 300px;
+                margin: 0 auto;
+                justify-content: center;
+
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .footer-right {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .start-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
+
+//mobile 
+/* =========================
+   FOOTER – MOBILE ONLY
+========================= */
+/* ===============================
+   FOOTER – MOBILE VERSION ONLY
+================================ */
+@media (max-width: 480px) {
+
+    // Variables for consistency
+// Variables for consistency
+$bg-color: #0a0a0a; // Dark background
+$text-color: #ffffff;
+$muted-color: #888888;
+$border-color: #333333;
+$btn-bg: #1a1a1a;
+
+
+.footer-right, .footer-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //background-color: $bg-color;
+  color: $text-color;
+  font-family: 'Inter', sans-serif; // Or a similar sans-serif
+  padding: 2px;
+  text-align: center;
+}
+
+.footer-right {
+  gap: 24px;
+  padding-bottom: 0;
+  margin-bottom: -45px; //new
+
+  .start-btn {
+    order: -1; // Moves the button to the very top
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    color: $text-color;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    i {
+      margin-left: 8px;
+      font-size: 14px;
+    }
+  }
+
+  .linkedin {
+    .linkedin-icon {
+        align-self: flex-start; //new
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) saturate(100%) invert(38%) sepia(87%) saturate(1633%) hue-rotate(193deg) brightness(97%) contrast(101%); 
+      // This filter approximates a LinkedIn blue if the SVG is black
+    }
+  }
+}
+
+.footer-middle {
+  gap: 30px;
+  padding-top: 24px;
+
+  .cities {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: $muted-color;
+    text-transform: uppercase;
+  }
+
+  .dev {
+    display: flex;
+    flex-direction: row; // Keeps label and button on one line if space permits
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: $text-color;
+
+    .vizgou {
+      background-color: $btn-bg;
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: $text-color;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.88px;
+      line-height: 22px; 
+    }
+  }
+
+  span:first-child { // The Copyright text
+    order: 3; // Moves copyright to the bottom
+    font-size: 13px;
+    color: $muted-color;
+    margin-top: 10px;
+  }
+}
+
+// Optional: Horizontal Rule at the very bottom
+// .footer-middle::after {
+//     content: "";
+//     width: 100%;
+//     height: 1px;
+//     background-color: $border-color;
+//     margin-top: 20px;
+// }
+  }
+  
+  

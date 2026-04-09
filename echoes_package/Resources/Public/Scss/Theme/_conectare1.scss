@@ -1,0 +1,136 @@
+// Variables for easy maintenance
+$bg-color: #f8f8f2;      // Warm off-white
+$primary-green: #122A08; // Deep forest green
+$font-Fraunces: 'Fraunces', serif; 
+$font-Inter: 'Inter 18pt', sans-serif; 
+$font-Oswald: 'Oswald', sans-serif;
+$font-Epilogue:'Epilogue', sans-serif; 
+#c279{
+background-color: #F9F9F2;
+    #c281{
+        .frame-group-container {
+            background-color: $bg-color;
+            //padding: 80px 40px; // Adjust based on your actual layout needs
+            display: flex;
+            justify-content: center;
+          
+            .frame-inner {
+              //max-width: 600px;
+              text-align: left;
+          
+              // "Conectare" text
+              p:first-of-type {
+                margin-bottom: 8px;
+                
+                .text-primary {
+                  //font-family: $font-Inter;
+                  font-size: 34px;
+                  font-weight: 500;
+                  color: $primary-green !important;
+                  letter-spacing: -0.02em;
+                }
+              }
+          
+              // "Suntem aici" Heading
+              h3 {
+                margin: 0 0 24px 0;
+                
+                span {
+                  //font-family: $font-Fraunces;
+                  font-size: 72px; // Large display size
+                  font-weight: 700;
+                  color: $primary-green;
+                  line-height: 1.1;
+                  letter-spacing: -0.03em;
+                }
+              }
+          
+              // Paragraph text
+              p:last-of-type {
+                //font-family: $font-Inter;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: rgba($primary-green, 0.8); // Slightly softer for body text
+                max-width: 700px;
+              }
+            }
+          }
+        }
+        //   email start
+        // Variables for consistency
+    $primary-text: #1a2b1a; // Dark forest green/black
+    $secondary-text: #4a5d4a; // Muted green/grey
+    $icon-size: 20px;
+    
+    #c286, #c287, #c288 {
+      //font-family: $font-family;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+      
+      // Reset default container padding/margins if necessary
+      .frame-group-inner, .frame-container {
+        padding: 0;
+        margin: 0;
+      }
+    
+      // Content Styling
+      .frame-inner {
+        h4 {
+          margin: 0 0 4px 0;
+          //font-family: $font-Epilogue;
+          font-size: 22px;
+          font-weight: 700;
+          color: $primary-green;
+          line-height: 1.2;
+        }
+    
+        p, a {
+          margin: 0;
+          font-size: 20px;
+          font-weight: 400;
+          //font-family: $font-Inter;
+          color: $primary-green;
+          text-decoration: none;
+          line-height: 1.5;
+        }
+    
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    // Adding Icons via Pseudo-elements
+    // Note: This replaces the need for extra img tags in HTML
+    #c286, #c287, #c288 {
+      &::before {
+        content: '';
+        display: inline-block;
+        width: $icon-size;
+        height: $icon-size;
+        margin-right: 16px;
+        margin-top: 2px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    
+    // Specific Icon Mapping
+    #c286::before {
+      // Email Icon (Envelope)
+      background-image: url('/fileadmin/user_upload/mail.png');
+    }
+    
+    #c287::before {
+      // Telefon Icon (Phone)
+      background-image:  url('/fileadmin/user_upload/call.png');
+    }
+    #c288::before {
+      // Birou Icon (Map Pin)
+      background-image:  url('/fileadmin/user_upload/location_on.png');
+    }
+    
+    
+}

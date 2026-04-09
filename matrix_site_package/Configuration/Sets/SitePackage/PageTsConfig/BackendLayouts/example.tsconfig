@@ -1,0 +1,30 @@
+#
+# BACKENDLAYOUT: EXAMPLE
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            example {
+                // title = LLL:EXT:matrix_site_package/Resources/Private/Language/locallang_be.xlf:backend_layout.example
+                title = MATRIX EXAMPLE
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:matrix_site_package/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:matrix_site_package/Resources/Public/Icons/BackendLayouts/example.svg
+            }
+        }
+    }
+}

@@ -1,0 +1,214 @@
+// Variables for easy maintenance
+$dark-green: #2d4c18; // Adjust to match your exact dark background
+$lime-green: #a2bc31;
+$white: #ffffff;
+$input-bg: #f9f9f7;
+$font-Fraunces: 'Fraunces', serif; 
+$font-Inter: 'Inter 18pt', sans-serif; 
+$font-Raleway:'Raleway', sans-serif; 
+$font-Oswald: 'Oswald', sans-serif;
+
+.frame.frame-mail-section{
+  .row{
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+    background-color: $dark-green;
+    .ce-container {
+        
+        padding: 0px 0px !important; // Remove default padding
+        color: $white;
+        font-family: 'Georgia', serif; // Heading looks like a serif
+      
+        // Left Column (Text)
+        .mail-left{
+          h2 {
+            //font-family: $font-Fraunces;
+            font-size: 72px;
+            font-weight: 600;
+          }
+          p {
+            //font-family: $font-Inter;
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+        .mail-right{
+
+          .ce-col {
+            padding: 0px 0px!important; // Remove default padding
+          }
+          .frame .frame-default .frame-type-powermail_pi1 .frame-layout-0{
+            padding: 0px 0px !important;
+            margin: 0px !important;
+          }
+        .powermail_label, .powermail_legend, h3 {
+            display: none !important; 
+          }
+        .tx-powermail {
+          padding: 0px !important;
+          margin: 0px !important;
+          .powermail_fieldset {
+            border: none;
+            padding: 0px !important;
+            margin: 0px !important;
+            // 1. Make the fieldset a flex container to align the rows
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 0;
+        
+            .powermail_legend, h3 { display: none; }
+        
+            // 2. Target the rows
+            .row {
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+              margin: 0; // Reset bootstrap margin
+            }
+        
+            // Row 1: Contains Input (left) and Checkbox (bottom)
+            .row:nth-of-type(1) {
+              flex: 1; // Take up most of the space on the left
+              
+              // The Email Input container
+              .powermail_fieldwrap_type_input {
+                flex: 0 0 100%; // Make it full width within this segment
+                
+                .powermail_label { display: none; }
+                
+                .powermail_input {
+                  background-color: $white;
+                  border: none;
+                  border-radius: 12px;
+                  height: 60px;
+                  width: 100%;
+                  padding: 0 20px;
+                  font-size: 17px;
+                  font-weight: 500;
+                  //font-family: $font-Raleway;
+                  
+                }
+              }
+        
+              // The Checkbox (which should stay below the input)
+              .powermail_fieldwrap_type_check {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+                margin-top: 15px;
+                
+                .powermail_label { display: none; }
+                
+                .form-check {
+                  display: flex;
+                  align-items: center;
+                  color: $white;
+                  font-size: 17px;
+                  font-weight: 500;
+                  //font-family: $font-Raleway;
+                  
+                  .form-check-input {
+                    margin-right: 10px;
+                    background: transparent;
+                    border: 1px solid $white;
+                  }
+                  
+                  .form-check-label {
+                    width: 100%;
+                    color: $white;
+                    // The green link text
+                    span, a { color: $lime-green; }
+                  }
+                }
+              }
+            }
+        
+            // Row 2: Contains the Submit button (Parallel to input)
+            .row:nth-of-type(2) {
+              flex: 0 0 auto; // Shrink to fit the button
+              width: auto;
+              margin-left: 15px; // Gap between input and button
+        
+              .powermail_fieldwrap_type_submit {
+                .powermail_field {
+                  padding: 0;
+                }
+                
+                input[type="submit"] {
+                  //font-family: $font-Oswald;
+                  background-color: $lime-green !important;
+                  color: $white;
+                  border: none;
+                  border-radius: 12px;
+                  height: 60px; // Must match input height
+                  padding: 0 20px;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  font-size: 13.5px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+        }
+      }
+      @media (max-width: 767px) {
+    
+        .ce-col {
+          display: flex;
+          flex-direction: column;
+          align-items: center; // Centers the flex items (the text blocks)
+          text-align: center;  // Centers the text inside the tags (h2, p)
+          width: 100%;
+        }
+    
+        // Ensure the inner text frame takes up full width to allow centering
+        .frame-type-text {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+    
+        // Targeting the specific headings and paragraphs
+        h2, p {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+    
+        // Centering the input/form area if needed
+        .ce-col-md-mail-right {
+           display: flex;
+           justify-content: center;
+           width: 100%;
+        }
+        .row:nth-of-type(2) {
+
+          .powermail_fieldwrap_type_submit {
+
+            
+            input[type="submit"] {
+              padding: 10px 24px;
+            }
+          }
+        }
+      }
+}// Variables to match your design
+
+@media (max-width: 768px) {
+.frame.frame-mail-section{
+
+    .ce-container {
+        
+        // Left Column (Text)
+        .mail-left{
+          h2 {
+            //font-family: $font-Fraunces;
+            font-size: 36px;
+          }
+        }
+    }
+}  
+}

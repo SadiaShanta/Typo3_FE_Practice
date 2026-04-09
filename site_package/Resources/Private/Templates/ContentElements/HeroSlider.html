@@ -1,0 +1,56 @@
+<div class="hero-slider-wrapper">
+    <div class="horizontal-slider" id="scroll-slider">
+      <f:for each="{children}" as="child">
+        <f:render partial="ContentElements/HeroSlide" arguments="{data: child.data}" />
+      </f:for>
+    </div>
+  </div>
+  
+  <f:asset.script identifier="scrolltrigger">
+    https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js
+  </f:asset.script>
+  
+  <f:asset.script identifier="scrolltrigger-plugin">
+    https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js
+  </f:asset.script>
+  
+  <f:asset.script identifier="scrolltrigger-slider" priority="true">
+    document.addEventListener("DOMContentLoaded", function() {
+      gsap.registerPlugin(ScrollTrigger);
+      let sections = gsap.utils.toArray("#scroll-slider > div");
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#scroll-slider",
+          pin: true,
+          scrub: 1,
+          snap: 1 / (sections.length - 1),
+          end: () => "+=" + document.querySelector("#scroll-slider").offsetWidth
+        }
+      });
+    });
+  </f:asset.script>
+  
+  <f:asset.css identifier="scrolltrigger-style">
+  .hero-slider-wrapper {
+    overflow: hidden;
+  }
+  .horizontal-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 400%;
+    height: 100vh;
+  }
+  .horizontal-slider > div {
+    flex: 0 0 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 3em;
+    position: relative;
+  }
+  </f:asset.css>
+  

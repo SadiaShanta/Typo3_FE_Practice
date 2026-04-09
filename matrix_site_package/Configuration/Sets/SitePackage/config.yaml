@@ -1,0 +1,4 @@
+name: reea-digital-limited/matrix-site-package
+label: 'Matrix Site Package'
+dependencies:
+  - bootstrap-package/full

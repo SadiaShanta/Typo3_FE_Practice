@@ -1,0 +1,55 @@
+<f:if condition="{data.header}">
+    {data.header}
+</f:if>
+<f:if condition="{data.tx_mask_showcase_card_items}">
+    <ul id="showcase-list">
+        <f:for each="{data.tx_mask_showcase_card_items}" as="data_item">
+            <li class="showcase-card">
+                <f:if condition="{data_item.tx_mask_showcase_card_bodytext}">
+                    {data_item.tx_mask_showcase_card_bodytext -> f:format.html()}
+                </f:if>
+                <f:for each="{data_item.tx_mask_showcase_card_image}" as="file">
+                    <f:image image="{file}" width="200" />
+                    {file.description}
+                </f:for>
+            </li>
+        </f:for>
+    </ul>
+    <button id="loadMoreBtn">Load More +</button>
+</f:if>
+<v:asset.script name="showcase_cards">
+    document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll("#showcase-list .showcase-card");
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
+    
+        let visibleCount = 6; // Initial cards
+    
+        // hide all first
+        cards.forEach((card, index) => {
+            if (index >= visibleCount) {
+                card.style.display = "none";
+            }
+        });
+    
+        loadMoreBtn.addEventListener("click", function () {
+            visibleCount += 6; // show next 6
+    
+            cards.forEach((card, index) => {
+                if (index < visibleCount) {
+                    card.style.display = "flex";
+                }
+            });
+    
+            // hide button if no more cards
+            if (visibleCount >= cards.length) {
+                loadMoreBtn.style.display = "none";
+            }
+        });
+    
+        // hide button if items <= initial
+        if (cards.length <= 6) {
+            loadMoreBtn.style.display = "none";
+        }
+    });
+    
+</v:asset.script>

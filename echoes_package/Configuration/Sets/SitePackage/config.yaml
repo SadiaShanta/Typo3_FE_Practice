@@ -1,0 +1,4 @@
+name: reea-digital-limited/echoes-package
+label: 'Echoes Package'
+dependencies:
+  - bootstrap-package/full
